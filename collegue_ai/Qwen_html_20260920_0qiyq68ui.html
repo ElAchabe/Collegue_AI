@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Collegue AI — Proposition UI/UX</title>
+<style>
+:root{
+  --primary:#2563eb; --primary-dark:#1d4ed8; --bg:#f1f5f9; --card:#ffffff;
+  --text:#0f172a; --muted:#64748b; --line:#e2e8f0; --radius:16px;
+  --blue-t:#dbeafe; --blue-i:#3b82f6; --green-t:#dcfce7; --green-i:#22c55e;
+  --purple-t:#f3e8ff; --purple-i:#a855f7; --amber-t:#fef3c7; --amber-i:#f59e0b;
+  --shadow:0 6px 18px rgba(15,23,42,.06);
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html,body{margin:0; height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Inter",Arial,sans-serif;
+  background:#0b1220; color:var(--text)}
+svg.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+svg.ic.fill{fill:currentColor;stroke:none}
+/* ---------- App frame ---------- */
+#app{position:relative; display:flex; flex-direction:column; height:100dvh; max-width:100%;
+  margin:0 auto; background:var(--bg); overflow:hidden}
+body.phone #app{max-width:430px; height:min(880px,96dvh); margin:auto; border-radius:34px;
+  border:10px solid #1f2937; box-shadow:0 30px 80px rgba(0,0,0,.55); height:92dvh}
+body{display:block}
+body.phone{display:flex; align-items:center; justify-content:center;
+  background:radial-gradient(1200px 600px at 50% -10%, #1e293b, #0b1220)}
+#main{flex:1; overflow-y:auto; padding:18px 16px 96px; scroll-behavior:smooth}
+/* ---------- Desktop rail ---------- */
+#rail{display:none}
+#app.is-desktop{flex-direction:row}
+#app.is-desktop #rail{display:flex; flex-direction:column; width:236px; background:var(--card);
+  border-right:1px solid var(--line); padding:20px 14px; gap:6px}
+#app.is-desktop #main{padding:26px 30px 40px}
+#app.is-desktop #tabbar, #app.is-desktop #fab{display:none}
+.rail-logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px; padding:6px 10px 16px}
+.rail-logo .logo-dot{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#7c3aed);
+  display:grid;place-items:center;color:#fff;font-size:17px}
+.rail-btn{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:12px;color:var(--muted);
+  font-weight:600;font-size:14.5px;cursor:pointer;border:none;background:none;width:100%;text-align:left}
+.rail-btn.active{background:var(--blue-t);color:var(--primary-dark)}
+.rail-foot{margin-top:auto;font-size:12px;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line)}
+/* ---------- Bottom tab bar ---------- */
+#tabbar{position:absolute;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line); display:flex; padding:8px 6px calc(8px + env(safe-area-inset-bottom));z-index:30}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;
+  color:var(--muted);font-size:11px;font-weight:600;cursor:pointer;padding:4px 0}
+.tab.active{color:var(--primary)}
+.tab .ic{width:23px;height:23px}
+/* ---------- FAB ---------- */
+#fab{position:absolute;right:18px;bottom:86px;width:56px;height:56px;border-radius:50%;border:none;
+  background:var(--primary);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(37,99,235,.4);
+  cursor:pointer;z-index:31}
+/* ---------- Generic blocks ---------- */
+.view{display:none}
+.view.active{display:block}
+.appbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.hello-small{font-size:13px;color:var(--primary-dark);font-weight:600}
+.hello-big{font-size:22px;font-weight:800;margin-top:2px}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:none;background:var(--card);color:var(--text);
+  display:grid;place-items:center;box-shadow:var(--shadow);cursor:pointer}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+.searchbar{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:14px;
+  padding:13px 14px;box-shadow:var(--shadow);color:var(--muted);margin:14px 0 20px}
+.searchbar input{border:none;outline:none;flex:1;font-size:14.5px;background:none;color:var(--text)}
+.sec-title{font-size:16.5px;font-weight:800;margin:6px 0 12px}
+.sec-row{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px}
+.link{color:var(--primary);font-weight:700;font-size:13px;cursor:pointer}
+/* module tiles */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#app.is-wide .tiles{grid-template-columns:1fr 1fr 1fr}
+#app.is-desktop .tiles{grid-template-columns:repeat(4,1fr)}
+.tile{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 14px;
+  cursor:pointer;transition:transform .12s ease}
+.tile:active{transform:scale(.97)}
+.tile .tico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:26px}
+.tile .tl{font-size:13.5px;font-weight:700;line-height:1.3}
+.t-blue{background:var(--blue-t);color:var(--blue-i)} .t-green{background:var(--green-t);color:var(--green-i)}
+.t-purple{background:var(--purple-t);color:var(--purple-i)} .t-amber{background:var(--amber-t);color:var(--amber-i)}
+/* activity rows */
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:14px;box-shadow:var(--shadow);
+  padding:13px 14px;cursor:pointer}
+.row .rico{width:40px;height:40px;border-radius:50%;background:var(--bg);color:var(--muted);
+  display:grid;place-items:center;flex:none}
+.row .rt{font-size:14px;font-weight:700}
+.row .rs{font-size:12px;color:var(--muted);margin-top:2px}
+.row .chev{margin-inline-start:auto;color:#cbd5e1}
+/* resources */
+.res-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.res-head .tt{font-size:18px;font-weight:800;flex:1}
+.seg-ic{display:flex;gap:6px}
+.seg-ic button{width:38px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);display:grid;place-items:center;cursor:pointer}
+.seg-ic button.on{background:var(--blue-t);color:var(--primary-dark);border-color:transparent}
+.res{display:flex;gap:12px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:12px;margin-bottom:12px;align-items:center}
+.res .thumb{width:64px;height:64px;border-radius:12px;background:var(--bg);color:var(--muted);
+  display:grid;place-items:center;font-size:10.5px;font-weight:800;flex:none;letter-spacing:.4px}
+.res .body{flex:1;min-width:0}
+.res .cat{font-size:10.5px;font-weight:800;letter-spacing:.7px;color:var(--primary);text-transform:uppercase}
+.res .name{font-size:14.5px;font-weight:800;margin:3px 0 3px}
+.res .by{font-size:12px;color:var(--muted)}
+.res .side{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.res .rate{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--amber-i);font-weight:700}
+.res .acts{display:flex;gap:8px;align-items:center;color:var(--muted)}
+.res .acts .dl{width:32px;height:32px;border-radius:9px;background:var(--blue-t);color:var(--primary-dark);
+  display:grid;place-items:center;border:none;cursor:pointer}
+#resList.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#app.is-desktop #resList.grid{grid-template-columns:1fr 1fr 1fr}
+#resList.grid .res{flex-direction:column;align-items:stretch}
+#resList.grid .res .thumb{width:100%;height:74px}
+#resList.grid .res .side{flex-direction:row;justify-content:space-between;align-items:center}
+.banner{display:flex;align-items:center;gap:12px;border-radius:var(--radius);padding:15px 16px;
+  background:linear-gradient(135deg,var(--primary),#4f46e5);color:#fff;cursor:pointer;margin:4px 0 18px;
+  box-shadow:0 10px 24px rgba(37,99,235,.35)}
+.banner .bt{font-weight:800;font-size:14.5px}
+.banner .bs{font-size:12px;opacity:.85;margin-top:2px}
+/* toolkit */
+.tk-head{background:var(--primary);margin:-18px -16px 0;padding:18px 16px 16px;color:#fff}
+#app.is-desktop .tk-head{margin:-26px -30px 0;padding:24px 30px 18px}
+.tk-head .tt{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:800;margin-bottom:12px}
+.tk-search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border-radius:12px;
+  padding:11px 12px}
+.tk-search input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:14px}
+.tk-search input::placeholder{color:rgba(255,255,255,.75)}
+.chips{display:flex;gap:8px;align-items:center;padding:12px 0;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:none;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;
+  background:var(--card);color:var(--muted);box-shadow:var(--shadow)}
+.chip.on{background:var(--primary);color:#fff}
+.chip.filter{display:flex;gap:7px;align-items:center;background:var(--card);color:var(--text)}
+.tk-row{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:14px;
+  box-shadow:var(--shadow);padding:13px 14px;margin-bottom:11px}
+.tk-row .dic{width:42px;height:42px;border-radius:11px;background:var(--blue-t);color:var(--primary-dark);
+  display:grid;place-items:center;flex:none}
+.tk-row .nt{font-size:14px;font-weight:800}
+.tk-row .meta{display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap}
+.badge{font-size:10.5px;font-weight:700;background:var(--bg);color:var(--muted);border-radius:7px;padding:3px 8px}
+.badge.ped{background:var(--green-t);color:#15803d}
+.badge.adm{background:var(--amber-t);color:#b45309}
+.tk-row .sz{font-size:11.5px;color:var(--muted)}
+.tk-row .dl{margin-inline-start:auto;width:36px;height:36px;border-radius:10px;border:none;
+  background:var(--blue-t);color:var(--primary-dark);display:grid;place-items:center;cursor:pointer}
+/* chat */
+#view-chat.active{display:flex;flex-direction:column;height:100%}
+.chat-head{display:flex;align-items:center;gap:11px;padding:4px 2px 12px;border-bottom:1px solid var(--line)}
+.chat-head .av{width:42px;height:42px;border-radius:50%;background:var(--blue-t);color:var(--primary-dark);
+  display:grid;place-items:center}
+.chat-head .nm{font-weight:800;font-size:15.5px}
+.chat-head .st{font-size:12px;color:var(--green-i);font-weight:700;display:flex;align-items:center;gap:5px}
+.chat-head .st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green-i)}
+.msgs{flex:1;overflow-y:auto;padding:14px 2px;display:flex;flex-direction:column;gap:4px}
+.day{align-self:center;font-size:12px;color:var(--muted);margin:6px 0 10px}
+.bub{max-width:80%;padding:12px 14px;border-radius:16px;font-size:14px;line-height:1.5;white-space:pre-line}
+.bub.ai{background:var(--card);box-shadow:var(--shadow);border-top-left-radius:6px;align-self:flex-start}
+.bub.me{background:var(--primary);color:#fff;border-top-right-radius:6px;align-self:flex-end}
+.btime{font-size:10.5px;color:var(--muted);margin:3px 2px 10px}
+.btime.r{align-self:flex-end}
+.src{font-size:10.5px;color:var(--muted);margin:-6px 2px 10px;font-style:italic}
+.typing{align-self:flex-start;background:var(--card);box-shadow:var(--shadow);border-radius:16px;
+  border-top-left-radius:6px;padding:14px 16px;display:flex;gap:5px}
+.typing i{width:7px;height:7px;border-radius:50%;background:#94a3b8;animation:bl 1s infinite}
+.typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+@keyframes bl{0%,100%{opacity:.25}50%{opacity:1}}
+.chips-chat{display:flex;gap:8px;overflow-x:auto;padding:10px 2px;scrollbar-width:none;border-top:1px solid var(--line)}
+.chips-chat::-webkit-scrollbar{display:none}
+.cchip{flex:none;border:none;border-radius:999px;background:var(--card);box-shadow:var(--shadow);
+  color:var(--primary-dark);font-size:12.5px;font-weight:700;padding:10px 14px;cursor:pointer}
+.inputbar{display:flex;align-items:center;gap:10px;padding:10px 2px 4px}
+.inputbar .clip{color:var(--muted);background:none;border:none;cursor:pointer;display:grid;place-items:center}
+.inputbar .fld{flex:1;background:var(--card);border-radius:999px;box-shadow:var(--shadow);padding:13px 16px;
+  border:none;outline:none;font-size:14px}
+.inputbar .send{width:44px;height:44px;border-radius:50%;border:none;background:var(--blue-t);
+  color:var(--primary-dark);display:grid;place-items:center;cursor:pointer}
+#app.is-desktop .msgwrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;flex:1;min-height:0}
+/* profile */
+.pf-card{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:26px 18px;text-align:center}
+.pf-av{width:92px;height:92px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#06b6d4,#2563eb);color:#fff;font-size:30px;font-weight:800}
+.pf-name{font-size:19px;font-weight:800}
+.pf-sub{font-size:13px;color:var(--muted);margin-top:4px}
+.pf-badges{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.pfb{font-size:11.5px;font-weight:700;border-radius:999px;padding:6px 12px;background:var(--bg);color:var(--text)}
+.pfb.hl{background:var(--blue-t);color:var(--primary-dark)}
+.grp{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin-top:16px;overflow:hidden}
+.grp-h{background:var(--bg);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.8px;
+  padding:10px 16px;text-transform:uppercase}
+.prow{display:flex;align-items:center;gap:12px;padding:15px 16px;border-top:1px solid var(--line)}
+.prow:first-of-type{border-top:none}
+.prow .pic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center}
+.prow .pl{font-size:14px;font-weight:700;flex:1}
+.prow .ps{font-size:11.5px;color:var(--muted);margin-top:2px}
+.langseg{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px}
+.langseg button{border:none;background:none;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:800;
+  color:var(--muted);cursor:pointer}
+.langseg button.on{background:#e2e8f0;color:var(--text)}
+.ok{color:var(--green-i)}
+.signout{display:flex;align-items:center;justify-content:center;gap:9px;margin:22px 0 8px;font-weight:800;
+  font-size:14.5px;color:var(--text);cursor:pointer}
+/* toast + demo pill */
+#toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(20px);background:#0f172a;
+  color:#fff;font-size:13px;font-weight:600;border-radius:999px;padding:11px 18px;opacity:0;pointer-events:none;
+  transition:.25s;z-index:99;max-width:86vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+#demoPill{position:fixed;top:14px;right:14px;z-index:99;border:none;border-radius:999px;background:#0f172a;
+  color:#fff;font-size:12.5px;font-weight:700;padding:10px 16px;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.4)}
+[dir="rtl"] .row .chev{transform:scaleX(-1)}
+</style>
+</head>
+<body class="phone">
+<button id="demoPill" onclick="toggleDemo()">🖥️ Aperçu ordinateur</button>
+
+<div id="app">
+  <!-- Desktop rail -->
+  <aside id="rail">
+    <div class="rail-logo"><span class="logo-dot">🧑‍🏫</span> Collegue AI</div>
+    <button class="rail-btn active" data-nav="accueil"><svg class="ic"><use href="#i-home"/></svg>Accueil</button>
+    <button class="rail-btn" data-nav="modules"><svg class="ic"><use href="#i-compas"/></svg>Modules</button>
+    <button class="rail-btn" data-nav="chat"><svg class="ic"><use href="#i-chat"/></svg>Assistant IA</button>
+    <button class="rail-btn" data-nav="profil"><svg class="ic"><use href="#i-user"/></svg>Profil</button>
+    <div class="rail-foot">v0.7 • 100 % hors ligne<br>APC • Pédagogie de l'intégration</div>
+  </aside>
+
+  <main id="main">
+    <!-- ============ ACCUEIL ============ -->
+    <section class="view active" id="view-accueil">
+      <div class="appbar">
+        <div><div class="hello-small">Bonjour,</div><div class="hello-big">Prof. El Achabe</div></div>
+        <button class="icon-btn" onclick="toast('3 rappels : contrôle continu S1 (J-132), concours robotique (mai), conseil de classe')"><svg class="ic"><use href="#i-bell"/></svg></button>
+      </div>
+      <form class="searchbar" onsubmit="homeSearch(event)">
+        <svg class="ic" style="color:var(--muted)"><use href="#i-search"/></svg>
+        <input id="homeQ" placeholder="Rechercher une ressource, un conseil, ou demander à l'IA...">
+      </form>
+      <div class="sec-title">Explorer les modules</div>
+      <div class="tiles">
+        <div class="tile" onclick="toast('Planification annuelle — écran dédié au T6')"><div class="tico t-blue"><svg class="ic"><use href="#i-cal"/></svg></div><div class="tl">Planification annuelle</div></div>
+        <div class="tile" onclick="toast('Planification d'unité — écran dédié au T6')"><div class="tico t-green"><svg class="ic"><use href="#i-box"/></svg></div><div class="tl">Planification d'unité</div></div>
+        <div class="tile" onclick="toast('Préparation de séquence — écran dédié au T6')"><div class="tico t-purple"><svg class="ic"><use href="#i-book"/></svg></div><div class="tl">Préparation de séquence</div></div>
+        <div class="tile" onclick="toast('Calendrier scolaire — écran dédié au T6')"><div class="tico t-amber"><svg class="ic"><use href="#i-spark"/></svg></div><div class="tl">Calendrier & échéances</div></div>
+        <div class="tile" onclick="setView('chat')"><div class="tico t-blue"><svg class="ic"><use href="#i-chat"/></svg></div><div class="tl">Assistant IA</div></div>
+        <div class="tile" onclick="setView('modules')"><div class="tico t-green"><svg class="ic"><use href="#i-doc"/></svg></div><div class="tl">Ressources officielles</div></div>
+      </div>
+      <div class="sec-row" style="margin-top:22px"><div class="sec-title" style="margin:0">Activité récente</div><span class="link" onclick="toast('Historique complet — à venir')">Tout voir ›</span></div>
+      <div class="rows">
+        <div class="row" onclick="toast('Ouvrir le plan annuel 1AC 2026-2027')"><div class="rico"><svg class="ic"><use href="#i-spark"/></svg></div><div><div class="rt">Plan annuel 1AC 2026-2027</div><div class="rs">il y a 2 h</div></div><svg class="ic chev"><use href="#i-chev"/></svg></div>
+        <div class="row" onclick="toast('Ouvrir le plan d'unité U2 (2AC)')"><div class="rico"><svg class="ic"><use href="#i-box"/></svg></div><div><div class="rt">Plan d'unité U2 (2AC) — Tableur</div><div class="rs">il y a 5 h</div></div><svg class="ic chev"><use href="#i-chev"/></svg></div>
+        <div class="row" onclick="toast('Ouvrir la fiche évaluation C12')"><div class="rico"><svg class="ic"><use href="#i-doc"/></svg></div><div><div class="rt">Fiche Évaluation — C12</div><div class="rs">hier</div></div><svg class="ic chev"><use href="#i-chev"/></svg></div>
+      </div>
+    </section>
+
+    <!-- ============ MODULES / RESSOURCES ============ -->
+    <section class="view" id="view-modules">
+      <div class="res-head">
+        <span class="tt">Ressources</span>
+        <div class="seg-ic">
+          <button class="on" id="btnList" onclick="resMode(false)"><svg class="ic"><use href="#i-list"/></svg></button>
+          <button id="btnGrid" onclick="resMode(true)"><svg class="ic"><use href="#i-grid"/></svg></button>
+        </div>
+      </div>
+      <div class="banner" onclick="setView('toolkit')">
+        <svg class="ic" style="width:26px;height:26px"><use href="#i-doc"/></svg>
+        <div><div class="bt">Boîte à outils</div><div class="bs">Modèles imprimables : fiches, grilles, plans</div></div>
+        <svg class="ic chev" style="margin-inline-start:auto"><use href="#i-chev"/></svg>
+      </div>
+      <div id="resList">
+        <div class="res"><div class="thumb">JSON</div><div class="body"><div class="cat">Programme</div><div class="name">Programme officiel 1AC–3AC (C0–C33)</div><div class="by">Ministère • curriculum_clean v2</div></div><div class="side"><div class="rate"><svg class="ic fill" style="width:14px;height:14px"><use href="#i-star"/></svg> v2</div><div class="acts"><button class="dl" onclick="toast('Téléchargement câblé au T4')"><svg class="ic" style="width:16px;height:16px"><use href="#i-dl"/></svg></button></div></div></div>
+        <div class="res"><div class="thumb">JSON</div><div class="body"><div class="cat">Calendrier</div><div class="name">Calendrier 2026-2027 (arrêté 047.26)</div><div class="by">Ministère • calendar_clean v2</div></div><div class="side"><div class="rate"><svg class="ic fill" style="width:14px;height:14px"><use href="#i-star"/></svg> v2</div><div class="acts"><button class="dl" onclick="toast('Téléchargement câblé au T4')"><svg class="ic" style="width:16px;height:16px"><use href="#i-dl"/></svg></button></div></div></div>
+        <div class="res"><div class="thumb">JSON</div><div class="body"><div class="cat">Pédagogie</div><div class="name">Cadre APC & pédagogie de l'intégration</div><div class="by">Ministère • pedagogy_clean v2</div></div><div class="side"><div class="rate"><svg class="ic fill" style="width:14px;height:14px"><use href="#i-star"/></svg> v2</div><div class="acts"><button class="dl" onclick="toast('Téléchargement câblé au T4')"><svg class="ic" style="width:16px;height:16px"><use href="#i-dl"/></svg></button></div></div></div>
+        <div class="res"><div class="thumb">PDF</div><div class="body"><div class="cat">Modèle</div><div class="name">Fiche Évaluation (vierge, critériée)</div><div class="by">Collegue AI • A4</div></div><div class="side"><div class="rate"><svg class="ic fill" style="width:14px;height:14px"><use href="#i-star"/></svg> A4</div><div class="acts"><button class="dl" onclick="toast('Impression A4 câblée au T4')"><svg class="ic" style="width:16px;height:16px"><use href="#i-dl"/></svg></button></div></div></div>
+        <div class="res"><div class="thumb">DOCX</div><div class="body"><div class="cat">Plan</div><div class="name">Plan annuel 1AC 2026-2027</div><div class="by">Enregistré • 34 semaines</div></div><div class="side"><div class="rate"><svg class="ic fill" style="width:14px;height:14px"><use href="#i-star"/></svg> 34s</div><div class="acts"><button class="dl" onclick="toast('Téléchargement câblé au T4')"><svg class="ic" style="width:16px;height:16px"><use href="#i-dl"/></svg></button></div></div></div>
+      </div>
+    </section>
+
+    <!-- ============ BOÎTE À OUTILS ============ -->
+    <section class="view" id="view-toolkit">
+      <div class="tk-head">
+        <div class="tt"><svg class="ic" onclick="setView('modules')" style="cursor:pointer"><use href="#i-back"/></svg> Boîte à outils</div>
+        <div class="tk-search"><svg class="ic"><use href="#i-search"/></svg><input id="tkQ" placeholder="Rechercher un modèle..." oninput="tkFilter()"></div>
+      </div>
+      <div class="chips">
+        <button class="chip filter"><svg class="ic" style="width:15px;height:15px"><use href="#i-filter"/></svg> Filtrer</button>
+        <button class="chip on" data-f="all" onclick="tkSet(this)">Tous</button>
+        <button class="chip" data-f="adm" onclick="tkSet(this)">Admin</button>
+        <button class="chip" data-f="ped" onclick="tkSet(this)">Pédagogique</button>
+      </div>
+      <div id="tkList">
+        <div class="tk-row" data-c="ped" data-n="fiche ressources"><div class="dic"><svg class="ic"><use href="#i-doc"/></svg></div><div><div class="nt">Fiche Ressources</div><div class="meta"><span class="badge ped">Pédagogique</span><span class="sz">PDF • 24 KB</span></div></div><button class="dl" onclick="toast('Impression A4 câblée au T4')"><svg class="ic" style="width:17px;height:17px"><use href="#i-dl"/></svg></button></div>
+        <div class="tk-row" data-c="ped" data-n="fiche integration"><div class="dic"><svg class="ic"><use href="#i-doc"/></svg></div><div><div class="nt">Fiche Intégration</div><div class="meta"><span class="badge ped">Pédagogique</span><span class="sz">PDF • 22 KB</span></div></div><button class="dl" onclick="toast('Impression A4 câblée au T4')"><svg class="ic" style="width:17px;height:17px"><use href="#i-dl"/></svg></button></div>
+        <div class="tk-row" data-c="ped" data-n="fiche evaluation"><div class="dic"><svg class="ic"><use href="#i-doc"/></svg></div><div><div class="nt">Fiche Évaluation</div><div class="meta"><span class="badge ped">Pédagogique</span><span class="sz">PDF • 26 KB</span></div></div><button class="dl" onclick="toast('Impression A4 câblée au T4')"><svg class="ic" style="width:17px;height:17px"><use href="#i-dl"/></svg></button></div>
+        <div class="tk-row" data-c="adm" data-n="grille annuelle"><div class="dic"><svg class="ic"><use href="#i-grid"/></svg></div><div><div class="nt">Grille annuelle (S1→S34)</div><div class="meta"><span class="badge adm">Admin</span><span class="sz">PDF • 45 KB</span></div></div><button class="dl" onclick="toast('Impression A4 câblée au T4')"><svg class="ic" style="width:17px;height:17px"><use href="#i-dl"/></svg></button></div>
+        <div class="tk-row" data-c="adm" data-n="rotation binomes"><div class="dic"><svg class="ic"><use href="#i-list"/></svg></div><div><div class="nt">Rotation binômes & émargement</div><div class="meta"><span class="badge adm">Admin</span><span class="sz">Sheets • 12 KB</span></div></div><button class="dl" onclick="toast('Téléchargement câblé au T4')"><svg class="ic" style="width:17px;height:17px"><use href="#i-dl"/></svg></button></div>
+      </div>
+    </section>
+
+    <!-- ============ CHAT ============ -->
+    <section class="view" id="view-chat">
+      <div class="msgwrap">
+        <div class="chat-head">
+          <div class="av"><svg class="ic"><use href="#i-chat"/></svg></div>
+          <div style="flex:1"><div class="nm">Collegue</div><div class="st">En ligne</div></div>
+          <button class="icon-btn" style="box-shadow:none" onclick="toast('Options : effacer la conversation, exporter')"><svg class="ic"><use href="#i-dots"/></svg></button>
+        </div>
+        <div class="msgs" id="msgs">
+          <div class="day">Aujourd'hui</div>
+          <div class="bub ai">Bonjour ! Je suis Collegue, votre assistant pédagogique. Comment puis-je vous aider à préparer aujourd'hui ?</div>
+          <div class="btime">09:00</div>
+        </div>
+        <div class="chips-chat">
+          <button class="cchip" onclick="send(this.textContent)">Situation déclenchante U1 (1AC)</button>
+          <button class="cchip" onclick="send(this.textContent)">Plan de séance</button>
+          <button class="cchip" onclick="send(this.textContent)">Évaluation formative 20 min</button>
+          <button class="cchip" onclick="send(this.textContent)">Prochaines échéances</button>
+        </div>
+        <form class="inputbar" onsubmit="sendForm(event)">
+          <button type="button" class="clip" onclick="toast('Pièces jointes bientôt disponibles')"><svg class="ic"><use href="#i-clip"/></svg></button>
+          <input class="fld" id="chatQ" placeholder="Posez votre question...">
+          <button class="send" type="submit"><svg class="ic"><use href="#i-send"/></svg></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ PROFIL ============ -->
+    <section class="view" id="view-profil">
+      <div class="appbar"><div class="hello-big" style="font-size:19px">Profil</div>
+        <button class="icon-btn" style="box-shadow:none" onclick="toast('Paramètres avancés (T5)')"><svg class="ic"><use href="#i-gear"/></svg></button></div>
+      <div class="pf-card">
+        <div class="pf-av">EA</div>
+        <div class="pf-name">Prof. El Achabe</div>
+        <div class="pf-sub">Informatique • Secondaire collégial (1AC–3AC)</div>
+        <div class="pf-badges"><span class="pfb">Enseignant certifié</span><span class="pfb hl">APC • Intégration</span></div>
+      </div>
+      <div class="grp">
+        <div class="grp-h">Préférences</div>
+        <div class="prow"><div class="pic t-blue"><svg class="ic"><use href="#i-globe"/></svg></div><div class="pl">Langue</div>
+          <div class="langseg"><button class="on" onclick="setLang(this,'fr')">FR</button><button onclick="setLang(this,'en')">EN</button><button onclick="setLang(this,'ar')">AR</button></div></div>
+        <div class="prow" onclick="toast('Notifications (T5)')"><div class="pic t-amber"><svg class="ic"><use href="#i-bell"/></svg></div><div class="pl">Notifications</div><svg class="ic chev"><use href="#i-chev"/></svg></div>
+      </div>
+      <div class="grp">
+        <div class="grp-h">Légal & conformité</div>
+        <div class="prow"><div class="pic t-green"><svg class="ic"><use href="#i-shield"/></svg></div>
+          <div style="flex:1"><div class="pl">Confidentialité & données</div><div class="ps">Aucune donnée élève collectée • 100 % local</div></div>
+          <svg class="ic ok"><use href="#i-check"/></svg></div>
+      </div>
+      <div class="signout" onclick="toast('Déconnexion (profil local)')"><svg class="ic"><use href="#i-out"/></svg> Se déconnecter</div>
+    </section>
+  </main>
+
+  <button id="fab" onclick="setView('chat')"><svg class="ic" style="width:24px;height:24px"><use href="#i-chat"/></svg></button>
+
+  <nav id="tabbar">
+    <button class="tab active" data-nav="accueil"><svg class="ic"><use href="#i-home"/></svg>Accueil</button>
+    <button class="tab" data-nav="modules"><svg class="ic"><use href="#i-compas"/></svg>Modules</button>
+    <button class="tab" data-nav="chat"><svg class="ic"><use href="#i-chat"/></svg>Chat</button>
+    <button class="tab" data-nav="profil"><svg class="ic"><use href="#i-user"/></svg>Profil</button>
+  </nav>
+</div>
+
+<div id="toast"></div>
+
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></symbol>
+  <symbol id="i-compas" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2 13.2 13.2 9.2 14.8 10.8 10.8z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l1.7-3.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 1 4 12c-.8.6-1 1.4-1 2h-6c0-.6-.2-1.4-1-2a7 7 0 0 1 4-12z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4z"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M21.4 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 0 1 5.65 5.66l-9.2 9.19a2 2 0 0 1-2.82-2.83l8.49-8.48"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.8 6.3.8-4.6 4.3 1.2 6.1-5.6-3-5.6 3 1.2-6.1L3 9.6l6.3-.8z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h2M3 12h2M3 18h2"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></symbol>
+</svg>
+
+<script>
+const app=document.getElementById('app');
+function setView(v){
+  document.querySelectorAll('.view').forEach(s=>s.classList.toggle('active', s.id==='view-'+v));
+  document.querySelectorAll('[data-nav]').forEach(b=>b.classList.toggle('active', b.dataset.nav===v));
+  document.getElementById('main').scrollTop=0;
+  if(v==='chat'){const m=document.getElementById('msgs'); m.scrollTop=m.scrollHeight;}
+}
+document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>setView(b.dataset.nav));
+function applyMode(){
+  const forced=document.body.classList.contains('phone');
+  const w=window.innerWidth;
+  app.classList.toggle('is-wide', w>=640 && !forced);
+  app.classList.toggle('is-desktop', w>=1024 && !forced);
+}
+window.addEventListener('resize', applyMode);
+function toggleDemo(){
+  const b=document.body; b.classList.toggle('phone');
+  document.getElementById('demoPill').textContent = b.classList.contains('phone') ? '🖥️ Aperçu ordinateur' : '📱 Aperçu téléphone';
+  applyMode();
+}
+let tt; function toast(m){const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show');
+  clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),2600);}
+function homeSearch(e){e.preventDefault(); const q=document.getElementById('homeQ').value.trim();
+  if(!q)return toast('Saisissez une question'); setView('chat'); send(q); document.getElementById('homeQ').value='';}
+function resMode(grid){document.getElementById('resList').classList.toggle('grid',grid);
+  document.getElementById('btnGrid').classList.toggle('on',grid);
+  document.getElementById('btnList').classList.toggle('on',!grid);}
+let tkF='all';
+function tkSet(btn){tkF=btn.dataset.f; document.querySelectorAll('.chips .chip[data-f]').forEach(c=>c.classList.toggle('on',c===btn)); tkFilter();}
+function tkFilter(){const q=(document.getElementById('tkQ').value||'').toLowerCase();
+  document.querySelectorAll('#tkList .tk-row').forEach(r=>{
+    const okF=(tkF==='all'||r.dataset.c===tkF), okQ=r.dataset.n.includes(q);
+    r.style.display=(okF&&okQ)?'':'none';});}
+function now(){return new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});}
+function bub(cls,txt){const d=document.createElement('div'); d.className='bub '+cls; d.textContent=txt; return d;}
+function send(q){
+  const m=document.getElementById('msgs');
+  m.appendChild(bub('me',q));
+  const t=document.createElement('div'); t.className='btime r'; t.textContent=now(); m.appendChild(t);
+  const ty=document.createElement('div'); ty.className='typing'; ty.innerHTML='<i></i><i></i><i></i>'; m.appendChild(ty);
+  m.scrollTop=m.scrollHeight;
+  setTimeout(()=>{
+    ty.remove();
+    let r;
+    const s=q.toLowerCase();
+    if(s.includes('échéance')) r="Prochaines échéances :\n🌴 Vacances mi-année — 2027-01-24\n⚠️ Contrôle continu S1 — 2027-01-04\n🏆 Concours programmation & robotique — 2027-05-03";
+    else if(s.includes('évaluation')) r="Évaluation formative (20 min) :\n• Critères minimaux : résultat conforme, démarche partiellement autonome.\n• Perfectionnement : autonomie, soin, rapidité.\nNorme : ≥ 2 par semestre.";
+    else if(s.includes('plan')) r="Plan de séance (1 h) :\n• Moment 1 — déclenchement (5 min).\n• Moment 2 — apprentissages (35 min) : Montrer → Faire faire → Faire dire.\n• Moment 3 — synthèse (10 min) + trace écrite.";
+    else r="Situation déclenchante — U1 (1AC) :\n• Contexte : le professeur montre un ordinateur éteint.\n• Déclencheur : les élèves citent écran, clavier, souris, UC.\n• Problème : « comment ces éléments travaillent-ils ensemble ? »\n• Lien : annonce de la compétence C0. (5 min, séance 1)";
+    m.appendChild(bub('ai',r));
+    const src=document.createElement('div'); src.className='src'; src.textContent='IA locale (guidée) • hors ligne'; m.appendChild(src);
+    const t2=document.createElement('div'); t2.className='btime'; t2.textContent=now(); m.appendChild(t2);
+    m.scrollTop=m.scrollHeight;
+  },950);
+}
+function sendForm(e){e.preventDefault(); const i=document.getElementById('chatQ'); const q=i.value.trim();
+  if(!q)return; i.value=''; send(q);}
+function setLang(btn,lang){
+  document.querySelectorAll('.langseg button').forEach(b=>b.classList.toggle('on',b===btn));
+  document.documentElement.dir = (lang==='ar') ? 'rtl' : 'ltr';
+  toast(lang==='ar' ? 'Aperçu RTL — traduction AR complète au T5' : (lang==='en' ? 'English UI scheduled (T5)' : 'Interface en français'));
+}
+applyMode();
+</script>
+</body>
+</html>
