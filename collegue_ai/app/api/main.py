@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from pathlib import Path
 from datetime import date, timedelta
@@ -16,6 +18,7 @@ PLANS_DIR = BASE_DIR / "data" / "plans"
 ANNUAL_DIR = PLANS_DIR / "annual"
 UNIT_DIR = PLANS_DIR / "unit"
 SEQUENCE_DIR = PLANS_DIR / "sequence"
+PWA_DIR = Path(__file__).resolve().parents[1] / "pwa"
 
 for directory in [ANNUAL_DIR, UNIT_DIR, SEQUENCE_DIR]:
     directory.mkdir(parents=True, exist_ok=True)
@@ -29,6 +32,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount PWA static files
+app.mount("/pwa", StaticFiles(directory=PWA_DIR, html=True), name="pwa")
 
 app.include_router(dashboard_router)
 app.include_router(ai_router)
@@ -208,6 +214,12 @@ def health():
         "project": "Collegue AI",
         "message": "Offline-first planning API"
     }
+
+
+@app.get("/")
+def root_redirect():
+    """Redirect root to PWA"""
+    return RedirectResponse("/pwa/")
 
 
 @app.get("/api/reference/curriculum/{level_code}")
@@ -740,3 +752,61 @@ def export_sequence(sequence_plan_id: str):
         )
 
     return {"html": wrap_html(sequence_plan_id, body)}
+
+
+@app.get("/api/plans/recent")
+def get_recent_plans():
+    """Return the 5 most recent saved plans (annual/unit/sequence) from data/plans/"""
+    recent = []
+    
+    # Collect annual plans
+    for file_path in ANNUAL_DIR.glob("*.json"):
+        try:
+            plan = json.loads(file_path.read_text(encoding="utf-8"))
+            recent.append({
+                "type": "annual",
+                "level": plan.get("level_code"),
+                "unit": None,
+                "title": plan.get("level_name"),
+                "saved_at": file_path.stat().st_mtime
+            })
+        except Exception:
+            continue
+    
+    # Collect unit plans
+    for file_path in UNIT_DIR.glob("*.json"):
+        try:
+            plan = json.loads(file_path.read_text(encoding="utf-8"))
+            recent.append({
+                "type": "unit",
+                "level": plan.get("level_code"),
+                "unit": plan.get("unit_id"),
+                "title": plan.get("unit_title"),
+                "saved_at": file_path.stat().st_mtime
+            })
+        except Exception:
+            continue
+    
+    # Collect sequence plans
+    for file_path in SEQUENCE_DIR.glob("*.json"):
+        try:
+            plan = json.loads(file_path.read_text(encoding="utf-8"))
+            recent.append({
+                "type": "sequence",
+                "level": plan.get("level_code"),
+                "unit": plan.get("sub_module_id"),
+                "title": plan.get("sequence_title"),
+                "saved_at": file_path.stat().st_mtime
+            })
+        except Exception:
+            continue
+    
+    # Sort by saved_at descending and take top 5
+    recent.sort(key=lambda x: x["saved_at"], reverse=True)
+    recent = recent[:5]
+    
+    # Convert timestamps to ISO format
+    for plan in recent:
+        plan["saved_at"] = date.fromtimestamp(plan["saved_at"]).isoformat()
+    
+    return recent
