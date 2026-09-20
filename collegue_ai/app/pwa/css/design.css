@@ -1,22 +1,27 @@
-/* Collegue AI - Official PWA UI/UX Design System */
+/* Collegue AI - Qwen AI Studio Inspired Design System */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --bg: #f1f5f9;
-  --card: #ffffff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --radius: 16px;
-  --blue-t: #dbeafe;
-  --blue-i: #3b82f6;
-  --green-t: #dcfce7;
-  --green-i: #22c55e;
-  --purple-t: #f3e8ff;
-  --purple-i: #a855f7;
-  --amber-t: #fef3c7;
-  --amber-i: #f59e0b;
-  --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  --primary: #615ced;
+  --primary-light: #7c77f5;
+  --primary-dark: #4f46e5;
+  --bg-app: #0d1117;
+  --bg-sidebar: #161b22;
+  --bg-card: #1c2128;
+  --bg-hover: #21262d;
+  --card: #1c2128;
+  --text: #f0f6fc;
+  --text-muted: #8b949e;
+  --line: #30363d;
+  --radius: 12px;
+  --blue-t: rgba(88, 166, 255, 0.15);
+  --blue-i: #58a6ff;
+  --green-t: rgba(46, 160, 67, 0.15);
+  --green-i: #2ea043;
+  --purple-t: rgba(188, 121, 255, 0.15);
+  --purple-i: #bc79ff;
+  --amber-t: rgba(210, 153, 34, 0.15);
+  --amber-i: #d29922;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --gradient-primary: linear-gradient(135deg, #615ced 0%, #8b5cf6 100%);
 }
 
 * {
@@ -28,7 +33,7 @@ html, body {
   margin: 0;
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", Arial, sans-serif;
-  background: #0b1220;
+  background: var(--bg-app);
   color: var(--text);
 }
 
@@ -36,7 +41,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(1200px 600px at 50% -10%, #1e293b, #0b1220);
+  background: var(--bg-app);
 }
 
 svg.ic {
@@ -62,7 +67,7 @@ svg.ic.fill {
   height: 100dvh;
   max-width: 100%;
   margin: 0 auto;
-  background: var(--bg);
+  background: var(--bg-app);
   overflow: hidden;
 }
 
@@ -73,7 +78,7 @@ svg.ic.fill {
   scroll-behavior: smooth;
 }
 
-/* ---------- Desktop rail ---------- */
+/* ---------- Desktop rail (Qwen-style sidebar) ---------- */
 #rail {
   display: none;
 }
@@ -85,15 +90,15 @@ svg.ic.fill {
 #app.is-desktop #rail {
   display: flex;
   flex-direction: column;
-  width: 236px;
-  background: var(--card);
+  width: 260px;
+  background: var(--bg-sidebar);
   border-right: 1px solid var(--line);
-  padding: 20px 14px;
-  gap: 6px;
+  padding: 16px 12px;
+  gap: 4px;
 }
 
 #app.is-desktop #main {
-  padding: 26px 30px 40px;
+  padding: 24px 28px 32px;
 }
 
 #app.is-desktop #tabbar,
@@ -104,49 +109,56 @@ svg.ic.fill {
 .rail-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 17px;
-  padding: 6px 10px 16px;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 10px 18px;
+  color: var(--text);
 }
 
 .rail-logo .logo-dot {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  background: var(--gradient-primary);
   display: grid;
   place-items: center;
   color: #fff;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .rail-btn {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 11px 12px;
-  border-radius: 12px;
-  color: var(--muted);
-  font-weight: 600;
-  font-size: 14.5px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
   border: none;
   background: none;
   width: 100%;
   text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.rail-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text);
 }
 
 .rail-btn.active {
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
 }
 
 .rail-foot {
   margin-top: auto;
-  font-size: 12px;
-  color: var(--muted);
-  padding: 10px 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+  padding: 12px 10px;
   border-top: 1px solid var(--line);
 }
 
@@ -156,11 +168,11 @@ svg.ic.fill {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--bg-sidebar);
   backdrop-filter: blur(8px);
   border-top: 1px solid var(--line);
   display: flex;
-  padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
   z-index: 30;
 }
 
@@ -169,39 +181,44 @@ svg.ic.fill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   border: none;
   background: none;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 10.5px;
+  font-weight: 500;
   cursor: pointer;
   padding: 4px 0;
+  transition: color 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--text);
 }
 
 .tab.active {
-  color: var(--primary);
+  color: var(--blue-i);
 }
 
 .tab .ic {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
 }
 
 /* ---------- FAB ---------- */
 #fab {
   position: absolute;
-  right: 18px;
-  bottom: 86px;
-  width: 56px;
-  height: 56px;
+  right: 16px;
+  bottom: 80px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: none;
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: #fff;
   display: grid;
   place-items: center;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 20px rgba(97, 92, 237, 0.4);
   cursor: pointer;
   z-index: 31;
 }
@@ -230,27 +247,34 @@ svg.ic.fill {
 
 .hello-small {
   font-size: 13px;
-  color: var(--primary-dark);
+  color: var(--blue-i);
   font-weight: 600;
 }
 
 .hello-big {
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 2px;
+  color: var(--text);
 }
 
 .icon-btn {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
-  background: var(--card);
-  color: var(--text);
+  background: var(--bg-card);
+  color: var(--text-muted);
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text);
 }
 
 .card {
@@ -264,12 +288,13 @@ svg.ic.fill {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: var(--card);
-  border-radius: 14px;
-  padding: 13px 14px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 12px 14px;
   box-shadow: var(--shadow);
-  color: var(--muted);
+  color: var(--text-muted);
   margin: 14px 0 20px;
+  border: 1px solid var(--line);
 }
 
 .searchbar input {
@@ -281,10 +306,15 @@ svg.ic.fill {
   color: var(--text);
 }
 
+.searchbar input::placeholder {
+  color: var(--text-muted);
+}
+
 .sec-title {
-  font-size: 16.5px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   margin: 6px 0 12px;
+  color: var(--text);
 }
 
 .sec-row {
@@ -295,8 +325,8 @@ svg.ic.fill {
 }
 
 .link {
-  color: var(--primary);
-  font-weight: 700;
+  color: var(--blue-i);
+  font-weight: 600;
   font-size: 13px;
   cursor: pointer;
 }
@@ -317,12 +347,17 @@ svg.ic.fill {
 }
 
 .tile {
-  background: var(--card);
+  background: var(--bg-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 16px 14px;
   cursor: pointer;
-  transition: transform 0.12s ease;
+  transition: transform 0.12s ease, background 0.15s ease;
+  border: 1px solid var(--line);
+}
+
+.tile:hover {
+  background: var(--bg-hover);
 }
 
 .tile:active {
@@ -340,8 +375,9 @@ svg.ic.fill {
 
 .tile .tl {
   font-size: 13.5px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.3;
+  color: var(--text);
 }
 
 .t-blue { background: var(--blue-t); color: var(--blue-i); }
@@ -360,19 +396,25 @@ svg.ic.fill {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--card);
-  border-radius: 14px;
+  background: var(--bg-card);
+  border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 13px 14px;
   cursor: pointer;
+  transition: background 0.15s ease;
+  border: 1px solid var(--line);
+}
+
+.row:hover {
+  background: var(--bg-hover);
 }
 
 .row .rico {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--bg);
-  color: var(--muted);
+  background: var(--bg-card);
+  color: var(--text-muted);
   display: grid;
   place-items: center;
   flex: none;
@@ -380,18 +422,19 @@ svg.ic.fill {
 
 .row .rt {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .row .rs {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin-top: 2px;
 }
 
 .row .chev {
   margin-inline-start: auto;
-  color: #cbd5e1;
+  color: var(--text-muted);
 }
 
 /* Resources */
@@ -404,8 +447,9 @@ svg.ic.fill {
 
 .res-head .tt {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   flex: 1;
+  color: var(--text);
 }
 
 .seg-ic {
@@ -414,44 +458,51 @@ svg.ic.fill {
 }
 
 .seg-ic button {
-  width: 38px;
+  width: 36px;
   height: 34px;
-  border-radius: 9px;
+  border-radius: 8px;
   border: 1px solid var(--line);
-  background: var(--card);
-  color: var(--muted);
+  background: var(--bg-card);
+  color: var(--text-muted);
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.seg-ic button:hover {
+  background: var(--bg-hover);
+  color: var(--text);
 }
 
 .seg-ic button.on {
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   border-color: transparent;
 }
 
 .res {
   display: flex;
   gap: 12px;
-  background: var(--card);
+  background: var(--bg-card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 12px;
   margin-bottom: 12px;
   align-items: center;
+  border: 1px solid var(--line);
 }
 
 .res .thumb {
   width: 64px;
   height: 64px;
   border-radius: 12px;
-  background: var(--bg);
-  color: var(--muted);
+  background: var(--bg-card);
+  color: var(--text-muted);
   display: grid;
   place-items: center;
   font-size: 10.5px;
-  font-weight: 800;
+  font-weight: 700;
   flex: none;
   letter-spacing: 0.4px;
 }
@@ -463,21 +514,22 @@ svg.ic.fill {
 
 .res .cat {
   font-size: 10.5px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.7px;
-  color: var(--primary);
+  color: var(--blue-i);
   text-transform: uppercase;
 }
 
 .res .name {
   font-size: 14.5px;
-  font-weight: 800;
+  font-weight: 700;
   margin: 3px 0 3px;
+  color: var(--text);
 }
 
 .res .by {
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .res .side {
@@ -493,14 +545,14 @@ svg.ic.fill {
   gap: 4px;
   font-size: 12px;
   color: var(--amber-i);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .res .acts {
   display: flex;
   gap: 8px;
   align-items: center;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .res .acts .dl {
@@ -508,11 +560,16 @@ svg.ic.fill {
   height: 32px;
   border-radius: 9px;
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   display: grid;
   place-items: center;
   border: none;
   cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.res .acts .dl:hover {
+  background: rgba(88, 166, 255, 0.25);
 }
 
 #resList.grid {
@@ -547,15 +604,21 @@ svg.ic.fill {
   gap: 12px;
   border-radius: var(--radius);
   padding: 15px 16px;
-  background: linear-gradient(135deg, var(--primary), #4f46e5);
+  background: var(--gradient-primary);
   color: #fff;
   cursor: pointer;
   margin: 4px 0 18px;
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 10px 24px rgba(97, 92, 237, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.15s ease;
+}
+
+.banner:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(97, 92, 237, 0.4);
 }
 
 .banner .bt {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14.5px;
 }
 
@@ -567,15 +630,15 @@ svg.ic.fill {
 
 /* Toolkit */
 .tk-head {
-  background: var(--primary);
+  background: var(--gradient-primary);
   margin: -18px -16px 0;
   padding: 18px 16px 16px;
   color: #fff;
 }
 
 #app.is-desktop .tk-head {
-  margin: -26px -30px 0;
-  padding: 24px 30px 18px;
+  margin: -24px -28px 0;
+  padding: 22px 28px 16px;
 }
 
 .tk-head .tt {
@@ -583,7 +646,7 @@ svg.ic.fill {
   align-items: center;
   gap: 10px;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
@@ -591,9 +654,10 @@ svg.ic.fill {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 11px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .tk-search input {
@@ -606,7 +670,7 @@ svg.ic.fill {
 }
 
 .tk-search input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .chips {
@@ -628,15 +692,21 @@ svg.ic.fill {
   border-radius: 10px;
   padding: 9px 14px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  background: var(--card);
-  color: var(--muted);
+  background: var(--bg-card);
+  color: var(--text-muted);
   box-shadow: var(--shadow);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  background: var(--bg-hover);
+  color: var(--text);
 }
 
 .chip.on {
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: #fff;
 }
 
@@ -644,7 +714,7 @@ svg.ic.fill {
   display: flex;
   gap: 7px;
   align-items: center;
-  background: var(--card);
+  background: var(--bg-card);
   color: var(--text);
 }
 
@@ -652,11 +722,17 @@ svg.ic.fill {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--card);
-  border-radius: 14px;
+  background: var(--bg-card);
+  border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 13px 14px;
   margin-bottom: 11px;
+  border: 1px solid var(--line);
+  transition: background 0.15s ease;
+}
+
+.tk-row:hover {
+  background: var(--bg-hover);
 }
 
 .tk-row .dic {
@@ -664,7 +740,7 @@ svg.ic.fill {
   height: 42px;
   border-radius: 11px;
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   display: grid;
   place-items: center;
   flex: none;
@@ -672,7 +748,8 @@ svg.ic.fill {
 
 .tk-row .nt {
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .tk-row .meta {
@@ -685,26 +762,26 @@ svg.ic.fill {
 
 .badge {
   font-size: 10.5px;
-  font-weight: 700;
-  background: var(--bg);
-  color: var(--muted);
+  font-weight: 600;
+  background: var(--bg-card);
+  color: var(--text-muted);
   border-radius: 7px;
   padding: 3px 8px;
 }
 
 .badge.ped {
   background: var(--green-t);
-  color: #15803d;
+  color: var(--green-i);
 }
 
 .badge.adm {
   background: var(--amber-t);
-  color: #b45309;
+  color: var(--amber-i);
 }
 
 .tk-row .sz {
   font-size: 11.5px;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .tk-row .dl {
@@ -714,10 +791,15 @@ svg.ic.fill {
   border-radius: 10px;
   border: none;
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.tk-row .dl:hover {
+  background: rgba(88, 166, 255, 0.25);
 }
 
 /* Chat */
@@ -734,20 +816,21 @@ svg.ic.fill {
   height: 42px;
   border-radius: 50%;
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   display: grid;
   place-items: center;
 }
 
 .chat-head .nm {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 15.5px;
+  color: var(--text);
 }
 
 .chat-head .st {
   font-size: 12px;
   color: var(--green-i);
-  font-weight: 700;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -773,7 +856,7 @@ svg.ic.fill {
 .day {
   align-self: center;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin: 6px 0 10px;
 }
 
@@ -787,14 +870,15 @@ svg.ic.fill {
 }
 
 .bub.ai {
-  background: var(--card);
+  background: var(--bg-card);
   box-shadow: var(--shadow);
   border-top-left-radius: 6px;
   align-self: flex-start;
+  border: 1px solid var(--line);
 }
 
 .bub.me {
-  background: var(--primary);
+  background: var(--gradient-primary);
   color: #fff;
   border-top-right-radius: 6px;
   align-self: flex-end;
@@ -802,7 +886,7 @@ svg.ic.fill {
 
 .btime {
   font-size: 10.5px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin: 3px 2px 10px;
 }
 
@@ -812,27 +896,28 @@ svg.ic.fill {
 
 .src {
   font-size: 10.5px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin: -6px 2px 10px;
   font-style: italic;
 }
 
 .typing {
   align-self: flex-start;
-  background: var(--card);
+  background: var(--bg-card);
   box-shadow: var(--shadow);
   border-radius: 16px;
   border-top-left-radius: 6px;
   padding: 14px 16px;
   display: flex;
   gap: 5px;
+  border: 1px solid var(--line);
 }
 
 .typing i {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #94a3b8;
+  background: var(--text-muted);
   animation: bl 1s infinite;
 }
 
@@ -861,13 +946,19 @@ svg.ic.fill {
   flex: none;
   border: none;
   border-radius: 999px;
-  background: var(--card);
+  background: var(--bg-card);
   box-shadow: var(--shadow);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   font-size: 12.5px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 10px 14px;
   cursor: pointer;
+  transition: background 0.15s ease;
+  border: 1px solid var(--line);
+}
+
+.cchip:hover {
+  background: var(--bg-hover);
 }
 
 .inputbar {
@@ -878,7 +969,7 @@ svg.ic.fill {
 }
 
 .inputbar .clip {
-  color: var(--muted);
+  color: var(--text-muted);
   background: none;
   border: none;
   cursor: pointer;
@@ -888,13 +979,18 @@ svg.ic.fill {
 
 .inputbar .fld {
   flex: 1;
-  background: var(--card);
+  background: var(--bg-card);
   border-radius: 999px;
   box-shadow: var(--shadow);
   padding: 13px 16px;
-  border: none;
+  border: 1px solid var(--line);
   outline: none;
   font-size: 14px;
+  color: var(--text);
+}
+
+.inputbar .fld::placeholder {
+  color: var(--text-muted);
 }
 
 .inputbar .send {
@@ -903,10 +999,15 @@ svg.ic.fill {
   border-radius: 50%;
   border: none;
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.inputbar .send:hover {
+  background: rgba(88, 166, 255, 0.25);
 }
 
 #app.is-desktop .msgwrap {
@@ -920,11 +1021,12 @@ svg.ic.fill {
 
 /* Profile */
 .pf-card {
-  background: var(--card);
+  background: var(--bg-card);
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 26px 18px;
   text-align: center;
+  border: 1px solid var(--line);
 }
 
 .pf-av {
@@ -934,7 +1036,7 @@ svg.ic.fill {
   margin: 0 auto 14px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #06b6d4, #2563eb);
+  background: var(--gradient-primary);
   color: #fff;
   font-size: 30px;
   font-weight: 800;
@@ -942,12 +1044,13 @@ svg.ic.fill {
 
 .pf-name {
   font-size: 19px;
-  font-weight: 800;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .pf-sub {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin-top: 4px;
 }
 
@@ -961,34 +1064,38 @@ svg.ic.fill {
 
 .pfb {
   font-size: 11.5px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 999px;
   padding: 6px 12px;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--line);
 }
 
 .pfb.hl {
   background: var(--blue-t);
-  color: var(--primary-dark);
+  color: var(--blue-i);
+  border-color: transparent;
 }
 
 .grp {
-  background: var(--card);
+  background: var(--bg-card);
   border-radius: 16px;
   box-shadow: var(--shadow);
   margin-top: 16px;
   overflow: hidden;
+  border: 1px solid var(--line);
 }
 
 .grp-h {
-  background: var(--bg);
-  color: var(--muted);
+  background: var(--bg-card);
+  color: var(--text-muted);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.8px;
   padding: 10px 16px;
   text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
 }
 
 .prow {
@@ -997,6 +1104,11 @@ svg.ic.fill {
   gap: 12px;
   padding: 15px 16px;
   border-top: 1px solid var(--line);
+  transition: background 0.15s ease;
+}
+
+.prow:hover {
+  background: var(--bg-hover);
 }
 
 .prow:first-of-type {
@@ -1013,22 +1125,24 @@ svg.ic.fill {
 
 .prow .pl {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   flex: 1;
+  color: var(--text);
 }
 
 .prow .ps {
   font-size: 11.5px;
-  color: var(--muted);
+  color: var(--text-muted);
   margin-top: 2px;
 }
 
 .langseg {
   display: flex;
-  background: var(--bg);
+  background: var(--bg-card);
   border-radius: 10px;
   padding: 3px;
   gap: 2px;
+  border: 1px solid var(--line);
 }
 
 .langseg button {
@@ -1037,14 +1151,20 @@ svg.ic.fill {
   border-radius: 8px;
   padding: 7px 12px;
   font-size: 12px;
-  font-weight: 800;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--text-muted);
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.langseg button:hover {
+  background: var(--bg-hover);
+  color: var(--text);
 }
 
 .langseg button.on {
-  background: #e2e8f0;
-  color: var(--text);
+  background: var(--blue-t);
+  color: var(--blue-i);
 }
 
 .ok {
@@ -1057,10 +1177,15 @@ svg.ic.fill {
   justify-content: center;
   gap: 9px;
   margin: 22px 0 8px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14.5px;
   color: var(--text);
   cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.signout:hover {
+  opacity: 0.8;
 }
 
 /* Toast */
@@ -1069,8 +1194,8 @@ svg.ic.fill {
   left: 50%;
   bottom: 110px;
   transform: translateX(-50%) translateY(20px);
-  background: #0f172a;
-  color: #fff;
+  background: var(--bg-card);
+  color: var(--text);
   font-size: 13px;
   font-weight: 600;
   border-radius: 999px;
@@ -1081,6 +1206,8 @@ svg.ic.fill {
   z-index: 99;
   max-width: 86vw;
   text-align: center;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
 #toast.show {
