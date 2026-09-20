@@ -12,6 +12,7 @@ const i18n = {
       // Navigation
       nav_home: 'Accueil',
       nav_modules: 'Modules',
+      nav_toolkit: 'Boîte à outils',
       nav_chat: 'Chat',
       nav_profile: 'Profil',
       
@@ -48,11 +49,24 @@ const i18n = {
     },
     
     en: {
-      // Reserved for future English translations
+      app_name: 'Collegue AI',
+      nav_home: 'Home',
+      nav_modules: 'Modules',
+      nav_toolkit: 'Toolkit',
+      nav_chat: 'Chat',
+      nav_profile: 'Profile',
+      greeting: 'Hello,',
+      role: 'ICT Teacher',
+      search_placeholder: 'Search for resources, tips, or ask AI...'
     },
     
     ar: {
-      // Reserved for future Arabic translations (RTL support via data-dir)
+      app_name: 'كوليج أي آي',
+      nav_home: 'الرئيسية',
+      nav_modules: 'الوحدات',
+      nav_toolkit: 'مجموعة الأدوات',
+      nav_chat: 'الدردشة',
+      nav_profile: 'الملف الشخصي'
     }
   },
   
