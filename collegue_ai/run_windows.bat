@@ -9,7 +9,7 @@ call .venv\Scripts\activate.bat
 
 pip install -r requirements.txt
 
-start "Collegue AI API" cmd /k uvicorn app.api.main:app --host 127.0.0.1 --port 8000
+start "Collegue AI API" cmd /k uvicorn app.api.main:app --host 0.0.0.0 --port 8000
 
 timeout /t 3
 

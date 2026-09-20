@@ -1,0 +1,20 @@
+{
+  "name": "Collegue AI",
+  "short_name": "Collegue",
+  "description": "Assistant de planification pédagogique pour enseignants d'informatique",
+  "start_url": "/pwa/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/pwa/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "lang": "fr"
+}
