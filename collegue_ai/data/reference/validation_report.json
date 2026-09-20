@@ -1,0 +1,18 @@
+{
+  "curriculum_clean.json": {
+    "errors": [],
+    "warnings": []
+  },
+  "calendar_clean.json": {
+    "errors": [],
+    "warnings": [
+      "Holiday 10 (Aïd Al Fitr (عيد الفطر)): date is estimated",
+      "Holiday 14 (Aïd Al Adha (عيد الأضحى)): date is estimated",
+      "Holiday 15 (Fatih Moharram (فاتح محرم)): date is estimated"
+    ]
+  },
+  "pedagogy_clean.json": {
+    "errors": [],
+    "warnings": []
+  }
+}

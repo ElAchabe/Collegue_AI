@@ -1,0 +1,106 @@
+{
+  "unit_plan_id": "UP-1AC-U2-2026-2027",
+  "annual_plan_id": "AP-1AC-2026-2027",
+  "level_code": "1AC",
+  "school_year": "2026-2027",
+  "unit_id": "U2",
+  "unit_title": "Production de documents Multimédia et Traitement de texte",
+  "targeted_competencies": [
+    "C11"
+  ],
+  "competency_details": [
+    {
+      "code": "C11",
+      "domain": "Traitement",
+      "statement": "Produire un document Multimédia"
+    }
+  ],
+  "total_official_hours": 16,
+  "annual_items": [
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_M1",
+      "unit_id": "U2",
+      "unit_title": "Production de documents Multimédia et Traitement de texte",
+      "sub_module_id": "1AC_U2_M1",
+      "topic": "Utilitaires graphiques et sonores (Fichiers dessin et fichiers audio)",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 9,
+      "week_end": 10,
+      "status": "planned"
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_M2",
+      "unit_id": "U2",
+      "unit_title": "Production de documents Multimédia et Traitement de texte",
+      "sub_module_id": "1AC_U2_M2",
+      "topic": "Traitement de textes (Saisie, correction, mise en forme, mise en page, impression, liens hypertextes)",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 14,
+      "planned_hours": 14,
+      "semester": 1,
+      "week_start": 11,
+      "week_end": 24,
+      "status": "planned"
+    }
+  ],
+  "proposed_sequences": [
+    {
+      "sub_module_id": "1AC_U2_M1",
+      "sequence_title": "Utilitaires graphiques et sonores (Fichiers dessin et fichiers audio)",
+      "competency_codes": [
+        "C11"
+      ],
+      "duration_hours": 2
+    },
+    {
+      "sub_module_id": "1AC_U2_M2",
+      "sequence_title": "Traitement de textes (Saisie, correction, mise en forme, mise en page, impression, liens hypertextes)",
+      "competency_codes": [
+        "C11"
+      ],
+      "duration_hours": 14
+    }
+  ],
+  "planning_moments": [
+    {
+      "moment": "1. Apprentissages ponctuels de ressources",
+      "target": "Acquisition ciblée des savoirs, savoir-faire techniques et attitudes (savoir-être)."
+    },
+    {
+      "moment": "2. Activités d'intégration",
+      "target": "Mobilisation coordonnée des acquis face à une situation-problème complexe ou un mini-projet."
+    },
+    {
+      "moment": "3. Activités d'évaluation et régulation",
+      "target": "Diagnostic des représentations, évaluation formative continue et remédiation pédagogique."
+    }
+  ],
+  "pedagogical_suggestions": [
+    "Centrer l'approche sur l'utilisation du logiciel, non sur le logiciel lui-même.",
+    "Utiliser des documents courts, objectifs et motivants pour les travaux pratiques.",
+    "Problématiser les activités et éviter les ateliers purement directifs.",
+    "Envisager de petits projets personnels ou d'équipe.",
+    "Veiller à ce que chaque apprenant bénéficie d'un temps de manipulation."
+  ],
+  "laboratory_tips": [
+    "Adopter systématiquement le travail en binômes homogènes ou semi-hétérogènes pour encourager l'apprentissage par les pairs.",
+    "Instaurer une rotation stricte du temps machine au clavier/souris (règle des 25 min par élève).",
+    "Organiser l'arborescence locale des postes élèves : créer un répertoire dédié par classe et sous-dossiers par binôme pour éviter l'écrasement involontaire des travaux.",
+    "Rappeler systématiquement les consignes de sécurité électrique, la posture ergonomique et la préservation du matériel informatique."
+  ],
+  "didactic_best_practices": [
+    "Éviter les exposés magistraux purement théoriques : privilégier la méthode démonstrative (Montrer -> Faire faire -> Faire dire) et la découverte guidée.",
+    "Problématiser systématiquement l'introduction d'un nouvel outil (ex. créer le besoin de répéter une instruction avant d'introduire la boucle Logo).",
+    "En traitement de texte (U2 1AC) et tableur (U3 2AC), imposer des textes courts et concrets pour maximiser le temps de manipulation et d'analyse.",
+    "Exiger la tenue d'un cahier de cours contenant une trace écrite synthétique (résumés, schémas, définitions clés) construite avec les élèves."
+  ],
+  "teacher_notes": "",
+  "status": "draft"
+}

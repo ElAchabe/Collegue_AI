@@ -1,0 +1,326 @@
+{
+  "annual_plan_id": "AP-1AC-2026-2027",
+  "school_year": "2026-2027",
+  "level_code": "1AC",
+  "level_name": "1ère Année Collège",
+  "subject": "Informatique",
+  "total_official_hours": 30,
+  "total_planned_hours": 30,
+  "assessment_schedule": {
+    "semester_1": {
+      "last_continuous_assessments": "2027-01-04 to 2027-01-09",
+      "massar_grades_deadline": "2027-01-16",
+      "local_unified_exam_3AC": "2027-01-18 and 2027-01-19",
+      "local_exam_grades_deadline": "2027-01-20",
+      "massar_report_generation": "From 2027-01-21",
+      "class_councils": "2027-01-21 and 2027-01-22",
+      "report_cards_distribution": "2027-01-23"
+    },
+    "semester_2": {
+      "last_continuous_assessments": "2027-06-14 to 2027-06-19",
+      "massar_grades_deadline_cc": "2027-06-22",
+      "collective_prep_regional_exam_3AC": "2027-06-21 and 2027-06-22",
+      "regional_unified_exam_3AC": "2027-06-23 and 2027-06-24",
+      "regional_exam_grades_deadline": "2027-06-30",
+      "massar_final_report_generation": "From 2027-07-01",
+      "class_and_orientation_councils": "2027-07-01 to 2027-07-02",
+      "final_results_distribution": "2027-07-03"
+    }
+  },
+  "status": "draft",
+  "items": [
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM1",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM1",
+      "topic": "Information et traitement automatique",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 1,
+      "week_end": 2,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-07",
+      "week_end_date": "2026-09-20",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM2",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM2",
+      "topic": "Système informatique (matériel/logiciel)",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 3,
+      "week_end": 4,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-21",
+      "week_end_date": "2026-10-04",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM3",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM3",
+      "topic": "Connectique et périphériques",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 1,
+      "planned_hours": 1,
+      "semester": 1,
+      "week_start": 5,
+      "week_end": 5,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-05",
+      "week_end_date": "2026-10-11",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM4",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM4",
+      "topic": "S.E et gestion des fenêtres",
+      "competency_codes": [
+        "C31"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 6,
+      "week_end": 7,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-12",
+      "week_end_date": "2026-10-25",
+      "holiday_conflicts": [
+        "Première période intermédiaire (الفترة البينية الأولى)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM5",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM5",
+      "topic": "Bureau et utilitaires de base",
+      "competency_codes": [
+        "C31"
+      ],
+      "official_hours": 1,
+      "planned_hours": 1,
+      "semester": 1,
+      "week_start": 8,
+      "week_end": 8,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-26",
+      "week_end_date": "2026-11-01",
+      "holiday_conflicts": [
+        "Fête de l'Unité (عيد الوحدة)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_SM1",
+      "unit_id": "U2",
+      "unit_title": "Production de documents (Texteur & Multimédia)",
+      "sub_module_id": "1AC_U2_SM1",
+      "topic": "Fichiers graphiques",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 3,
+      "planned_hours": 3,
+      "semester": 1,
+      "week_start": 9,
+      "week_end": 11,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-11-02",
+      "week_end_date": "2026-11-22",
+      "holiday_conflicts": [
+        "Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء)",
+        "Fête de l'Indépendance (عيد الاستقلال)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_SM2",
+      "unit_id": "U2",
+      "unit_title": "Production de documents (Texteur & Multimédia)",
+      "sub_module_id": "1AC_U2_SM2",
+      "topic": "Fichiers audio",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 3,
+      "planned_hours": 3,
+      "semester": 1,
+      "week_start": 12,
+      "week_end": 14,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-11-23",
+      "week_end_date": "2026-12-13",
+      "holiday_conflicts": [
+        "Deuxième période intermédiaire (الفترة البينية الثانية)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_SM3",
+      "unit_id": "U2",
+      "unit_title": "Production de documents (Texteur & Multimédia)",
+      "sub_module_id": "1AC_U2_SM3",
+      "topic": "Traitement de texte : gestion de documents",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 3,
+      "planned_hours": 3,
+      "semester": 1,
+      "week_start": 15,
+      "week_end": 17,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-12-14",
+      "week_end_date": "2027-01-03",
+      "holiday_conflicts": [
+        "Nouvel An Grégorien (فاتح السنة الميلادية)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_SM4",
+      "unit_id": "U2",
+      "unit_title": "Production de documents (Texteur & Multimédia)",
+      "sub_module_id": "1AC_U2_SM4",
+      "topic": "Saisie, correction, mise en forme",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 3,
+      "planned_hours": 3,
+      "semester": 2,
+      "week_start": 18,
+      "week_end": 20,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-01-04",
+      "week_end_date": "2027-01-24",
+      "holiday_conflicts": [
+        "Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال)",
+        "Nouvel An Amazigh (فاتح السنة الأمازيغية)",
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U2_SM5",
+      "unit_id": "U2",
+      "unit_title": "Production de documents (Texteur & Multimédia)",
+      "sub_module_id": "1AC_U2_SM5",
+      "topic": "Mise en page, tableaux, images, liens, impression",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 4,
+      "planned_hours": 4,
+      "semester": 2,
+      "week_start": 21,
+      "week_end": 24,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-01-25",
+      "week_end_date": "2027-02-21",
+      "holiday_conflicts": [
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U3_SM1",
+      "unit_id": "U3",
+      "unit_title": "Recherche documentaire",
+      "sub_module_id": "1AC_U3_SM1",
+      "topic": "Recherche sur supports locaux/amovibles",
+      "competency_codes": [
+        "C21"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 2,
+      "week_start": 25,
+      "week_end": 26,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-02-22",
+      "week_end_date": "2027-03-07",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U3_SM2",
+      "unit_id": "U3",
+      "unit_title": "Recherche documentaire",
+      "sub_module_id": "1AC_U3_SM2",
+      "topic": "Recherche par nom/extension/contenu",
+      "competency_codes": [
+        "C21"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 2,
+      "week_start": 27,
+      "week_end": 28,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-03-08",
+      "week_end_date": "2027-03-21",
+      "holiday_conflicts": [
+        "Aïd Al Fitr (عيد الفطر)",
+        "Troisième période intermédiaire (الفترة البينية الثالثة)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U3_SM3",
+      "unit_id": "U3",
+      "unit_title": "Recherche documentaire",
+      "sub_module_id": "1AC_U3_SM3",
+      "topic": "Recherche sur encyclopédies numériques",
+      "competency_codes": [
+        "C22"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 2,
+      "week_start": 29,
+      "week_end": 30,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-03-22",
+      "week_end_date": "2027-04-04",
+      "holiday_conflicts": [
+        "Troisième période intermédiaire (الفترة البينية الثالثة)"
+      ]
+    }
+  ],
+  "warnings": [
+    "1AC_U1_SM4: chevauche Première période intermédiaire (الفترة البينية الأولى).",
+    "1AC_U1_SM5: chevauche Fête de l'Unité (عيد الوحدة).",
+    "1AC_U2_SM1: chevauche Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء), Fête de l'Indépendance (عيد الاستقلال).",
+    "1AC_U2_SM2: chevauche Deuxième période intermédiaire (الفترة البينية الثانية).",
+    "1AC_U2_SM3: chevauche Nouvel An Grégorien (فاتح السنة الميلادية).",
+    "1AC_U2_SM4: chevauche Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال), Nouvel An Amazigh (فاتح السنة الأمازيغية), Vacances de mi-année (عطلة منتصف السنة الدراسية).",
+    "1AC_U2_SM5: chevauche Vacances de mi-année (عطلة منتصف السنة الدراسية).",
+    "1AC_U3_SM2: chevauche Aïd Al Fitr (عيد الفطر), Troisième période intermédiaire (الفترة البينية الثالثة).",
+    "1AC_U3_SM3: chevauche Troisième période intermédiaire (الفترة البينية الثالثة)."
+  ]
+}

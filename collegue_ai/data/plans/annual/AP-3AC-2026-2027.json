@@ -1,0 +1,155 @@
+{
+  "annual_plan_id": "AP-3AC-2026-2027",
+  "school_year": "2026-2027",
+  "level_code": "3AC",
+  "level_name": "3ème Année du Cycle Secondaire Collégial",
+  "subject": "Informatique",
+  "total_official_hours": 30,
+  "total_planned_hours": 30,
+  "assessment_schedule": {
+    "semester_1": {
+      "last_continuous_assessments": "2027-01-04 to 2027-01-09",
+      "massar_grades_deadline": "2027-01-16",
+      "local_unified_exam_3AC": "2027-01-18 and 2027-01-19",
+      "local_exam_grades_deadline": "2027-01-20",
+      "massar_report_generation": "From 2027-01-21",
+      "class_councils": "2027-01-21 and 2027-01-22",
+      "report_cards_distribution": "2027-01-23"
+    },
+    "semester_2": {
+      "last_continuous_assessments": "2027-06-14 to 2027-06-19",
+      "massar_grades_deadline_cc": "2027-06-22",
+      "collective_prep_regional_exam_3AC": "2027-06-21 and 2027-06-22",
+      "regional_unified_exam_3AC": "2027-06-23 and 2027-06-24",
+      "regional_exam_grades_deadline": "2027-06-30",
+      "massar_final_report_generation": "From 2027-07-01",
+      "class_and_orientation_councils": "2027-07-01 to 2027-07-02",
+      "final_results_distribution": "2027-07-03"
+    }
+  },
+  "status": "draft",
+  "items": [
+    {
+      "item_id": "AP-3AC-2026-2027-3AC_U1_M1",
+      "unit_id": "U1",
+      "unit_title": "Réseaux informatiques et typologie",
+      "sub_module_id": "3AC_U1_M1",
+      "topic": "Typologie des réseaux (LAN, MAN, WAN)",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 1,
+      "week_end": 2,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-07",
+      "week_end_date": "2026-09-20",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-3AC-2026-2027-3AC_U2_M1",
+      "unit_id": "U2",
+      "unit_title": "Présentation assistée par ordinateur (PAO / Diaporama)",
+      "sub_module_id": "3AC_U2_M1",
+      "topic": "Création de diaporamas, animations, transitions, insertion d'objets multimédias, liens hypertextes",
+      "competency_codes": [
+        "C11"
+      ],
+      "official_hours": 10,
+      "planned_hours": 10,
+      "semester": 1,
+      "week_start": 3,
+      "week_end": 12,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-21",
+      "week_end_date": "2026-11-29",
+      "holiday_conflicts": [
+        "Première période intermédiaire (الفترة البينية الأولى)",
+        "Fête de l'Unité (عيد الوحدة)",
+        "Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء)",
+        "Fête de l'Indépendance (عيد الاستقلال)"
+      ]
+    },
+    {
+      "item_id": "AP-3AC-2026-2027-3AC_U3_M1",
+      "unit_id": "U3",
+      "unit_title": "Programmation Logo avancée",
+      "sub_module_id": "3AC_U3_M1",
+      "topic": "Variables, procédures paramétrées, structuration d'un projet de programmation",
+      "competency_codes": [
+        "C13"
+      ],
+      "official_hours": 8,
+      "planned_hours": 8,
+      "semester": 1,
+      "week_start": 13,
+      "week_end": 20,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-11-30",
+      "week_end_date": "2027-01-24",
+      "holiday_conflicts": [
+        "Deuxième période intermédiaire (الفترة البينية الثانية)",
+        "Nouvel An Grégorien (فاتح السنة الميلادية)",
+        "Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال)",
+        "Nouvel An Amazigh (فاتح السنة الأمازيغية)",
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)"
+      ]
+    },
+    {
+      "item_id": "AP-3AC-2026-2027-3AC_U4_M1",
+      "unit_id": "U4",
+      "unit_title": "Recherches documentaires sur le Web",
+      "sub_module_id": "3AC_U4_M1",
+      "topic": "Internet, Web, URL, navigateurs, moteurs de recherche et évaluation critique des sources",
+      "competency_codes": [
+        "C23"
+      ],
+      "official_hours": 6,
+      "planned_hours": 6,
+      "semester": 2,
+      "week_start": 21,
+      "week_end": 26,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-01-25",
+      "week_end_date": "2027-03-07",
+      "holiday_conflicts": [
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)"
+      ]
+    },
+    {
+      "item_id": "AP-3AC-2026-2027-3AC_U5_M1",
+      "unit_id": "U5",
+      "unit_title": "Messagerie électronique",
+      "sub_module_id": "3AC_U5_M1",
+      "topic": "Comptes de messagerie, composition, gestion des pièces jointes et nétiquette",
+      "competency_codes": [
+        "C33"
+      ],
+      "official_hours": 4,
+      "planned_hours": 4,
+      "semester": 2,
+      "week_start": 27,
+      "week_end": 30,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-03-08",
+      "week_end_date": "2027-04-04",
+      "holiday_conflicts": [
+        "Aïd Al Fitr (عيد الفطر)",
+        "Troisième période intermédiaire (الفترة البينية الثالثة)"
+      ]
+    }
+  ],
+  "warnings": [
+    "3AC_U2_M1: chevauche Première période intermédiaire (الفترة البينية الأولى), Fête de l'Unité (عيد الوحدة), Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء), Fête de l'Indépendance (عيد الاستقلال).",
+    "3AC_U3_M1: chevauche Deuxième période intermédiaire (الفترة البينية الثانية), Nouvel An Grégorien (فاتح السنة الميلادية), Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال), Nouvel An Amazigh (فاتح السنة الأمازيغية), Vacances de mi-année (عطلة منتصف السنة الدراسية).",
+    "3AC_U4_M1: chevauche Vacances de mi-année (عطلة منتصف السنة الدراسية).",
+    "3AC_U5_M1: chevauche Aïd Al Fitr (عيد الفطر), Troisième période intermédiaire (الفترة البينية الثالثة)."
+  ]
+}

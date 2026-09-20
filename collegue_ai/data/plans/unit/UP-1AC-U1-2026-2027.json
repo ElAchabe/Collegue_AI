@@ -1,0 +1,211 @@
+{
+  "unit_plan_id": "UP-1AC-U1-2026-2027",
+  "annual_plan_id": "AP-1AC-2026-2027",
+  "level_code": "1AC",
+  "school_year": "2026-2027",
+  "unit_id": "U1",
+  "unit_title": "Système informatique & Système d'exploitation",
+  "targeted_competencies": [
+    "C0",
+    "C31"
+  ],
+  "competency_details": [
+    {
+      "code": "C0",
+      "domain": "Culture informatique / Traitement",
+      "statement": "Maîtriser les technologies de base relatives au fonctionnement d'un système informatique"
+    },
+    {
+      "code": "C31",
+      "domain": "Communication",
+      "statement": "Exploiter les interfaces graphiques d'un S.E"
+    }
+  ],
+  "total_official_hours": 8,
+  "annual_items": [
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM1",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM1",
+      "topic": "Information et traitement automatique",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 1,
+      "week_end": 2,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-07",
+      "week_end_date": "2026-09-20",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM2",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM2",
+      "topic": "Système informatique (matériel/logiciel)",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 3,
+      "week_end": 4,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-21",
+      "week_end_date": "2026-10-04",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM3",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM3",
+      "topic": "Connectique et périphériques",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 1,
+      "planned_hours": 1,
+      "semester": 1,
+      "week_start": 5,
+      "week_end": 5,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-05",
+      "week_end_date": "2026-10-11",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM4",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM4",
+      "topic": "S.E et gestion des fenêtres",
+      "competency_codes": [
+        "C31"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 6,
+      "week_end": 7,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-12",
+      "week_end_date": "2026-10-25",
+      "holiday_conflicts": [
+        "Première période intermédiaire (الفترة البينية الأولى)"
+      ]
+    },
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U1_SM5",
+      "unit_id": "U1",
+      "unit_title": "Système informatique & Système d'exploitation",
+      "sub_module_id": "1AC_U1_SM5",
+      "topic": "Bureau et utilitaires de base",
+      "competency_codes": [
+        "C31"
+      ],
+      "official_hours": 1,
+      "planned_hours": 1,
+      "semester": 1,
+      "week_start": 8,
+      "week_end": 8,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-26",
+      "week_end_date": "2026-11-01",
+      "holiday_conflicts": [
+        "Fête de l'Unité (عيد الوحدة)"
+      ]
+    }
+  ],
+  "proposed_sequences": [
+    {
+      "sub_module_id": "1AC_U1_SM1",
+      "sequence_title": "Information et traitement automatique",
+      "competency_codes": [
+        "C0"
+      ],
+      "duration_hours": 2
+    },
+    {
+      "sub_module_id": "1AC_U1_SM2",
+      "sequence_title": "Système informatique (matériel/logiciel)",
+      "competency_codes": [
+        "C0"
+      ],
+      "duration_hours": 2
+    },
+    {
+      "sub_module_id": "1AC_U1_SM3",
+      "sequence_title": "Connectique et périphériques",
+      "competency_codes": [
+        "C0"
+      ],
+      "duration_hours": 1
+    },
+    {
+      "sub_module_id": "1AC_U1_SM4",
+      "sequence_title": "S.E et gestion des fenêtres",
+      "competency_codes": [
+        "C31"
+      ],
+      "duration_hours": 2
+    },
+    {
+      "sub_module_id": "1AC_U1_SM5",
+      "sequence_title": "Bureau et utilitaires de base",
+      "competency_codes": [
+        "C31"
+      ],
+      "duration_hours": 1
+    }
+  ],
+  "planning_moments": [
+    {
+      "moment": "1. Apprentissages ponctuels de ressources",
+      "target": "Acquisition ciblée des savoirs, savoir-faire et attitudes."
+    },
+    {
+      "moment": "2. Activités d'intégration",
+      "target": "Mobilisation coordonnée face à une situation-problème ou mini-projet."
+    },
+    {
+      "moment": "3. Activités d'évaluation et régulation",
+      "target": "Diagnostic, formative continue et remédiation."
+    }
+  ],
+  "pedagogical_suggestions": [
+    "Étaler la découverte de l'outil informatique sur plusieurs séances.",
+    "Utiliser des schémas illustratifs (constituants d'un ordinateur, touches du clavier).",
+    "Ouvrir au besoin une unité centrale pour l'observation.",
+    "Appuyer le développement des notions par des démonstrations pratiques.",
+    "Éduquer les apprenants à une éthique d'utilisation et à la préservation du matériel."
+  ],
+  "laboratory_tips": [
+    "Binômes homogènes/semi-hétérogènes",
+    "Rotation 25 min",
+    "Élève tuteur par rangée",
+    "Fiche d'aide pas-à-pas + défi pour rapides",
+    "Préservation du matériel et sécurité"
+  ],
+  "didactic_best_practices": [
+    "Montrer → Faire → Dire",
+    "Textes courts et concrets",
+    "Problématiser, éviter le directif passif",
+    "Étaler la découverte de l'outil",
+    "Petits projets personnels/équipe",
+    "Faire déceler et corriger les erreurs"
+  ],
+  "teacher_notes": "",
+  "status": "draft"
+}

@@ -1,0 +1,49 @@
+{
+  "sequence_plan_id": "SEQ-1AC_U2_M2-EVA",
+  "unit_plan_id": "UP-1AC-U2-2026-2027",
+  "level_code": "1AC",
+  "unit_id": "U2",
+  "sub_module_id": "1AC_U2_M2",
+  "sequence_title": "Traitement de textes (Saisie, correction, mise en forme, mise en page, impression, liens hypertextes)",
+  "fiche_type": "fiche_evaluation",
+  "competency_codes": [
+    "C11"
+  ],
+  "duration_hours": 14,
+  "template_structure": [
+    "Compétence(s) à évaluer",
+    "Énoncé de la situation d'évaluation (inédite pour l'apprenant)",
+    "Grille critériée (Critères minimaux vs Critères de perfectionnement)",
+    "Indicateurs observables de réussite et barème"
+  ],
+  "status": "draft",
+  "competency_to_evaluate": [
+    "C11"
+  ],
+  "evaluation_type": "formative",
+  "duration_minutes": 20,
+  "evaluation_situation": "",
+  "criteria": {
+    "criteres_minimaux": [],
+    "criteres_de_perfectionnement": []
+  },
+  "observable_indicators": [],
+  "evaluation_norms": {
+    "formative": {
+      "frequency": "Au moins 2 évaluations formatives par semestre",
+      "duration": "Maximum 20 minutes par passation",
+      "focus": "Vérification de la maîtrise des ressources (savoirs et savoir-faire) et ajustement immédiat.",
+      "error_philosophy": "Droit à l'erreur: l'erreur est un indicateur cognitif et le point de départ de la remédiation, non une faute pénalisante."
+    },
+    "summative": {
+      "frequency": "1 évaluation sommative par semestre (Contrôle Continu)",
+      "duration": "Environ 55 minutes",
+      "format": "Épreuve pratique/théorique basée sur une situation de résolution de problèmes complexes."
+    },
+    "criteria_design_rules": [
+      "Limiter le nombre de critères pour assurer la fidélité et la justesse de la correction.",
+      "Séparer rigoureusement les critères minimaux (maîtrise du seuil) et les critères de perfectionnement (qualité, créativité).",
+      "Vérifier chaque critère au moins 2 à 3 fois au cours de l'épreuve à travers des indicateurs observables indépendants."
+    ]
+  }
+}

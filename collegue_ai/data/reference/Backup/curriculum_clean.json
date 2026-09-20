@@ -1,0 +1,532 @@
+{
+  "curriculum_metadata": {
+    "subject": "Informatique",
+    "cycle": "Secondaire Collégial",
+    "official_guideline_source": "Programmes et Instructions Officielles (Direction des Curricula, 2006)",
+    "global_aim": "Utiliser les NTIC pour rechercher, traiter et communiquer des informations"
+  },
+  "competency_framework": {
+    "domains_of_action": [
+      {
+        "id": "DA_CULTURE",
+        "name": "Culture informatique",
+        "competencies": [
+          {
+            "code": "C0",
+            "statement": "Maîtriser les technologies de base relatives au fonctionnement d'un système informatique",
+            "resources": {
+              "savoir": [
+                "Constituants d'un S.I",
+                "Fonctions de chaque constituant",
+                "Notion de logiciel, de fichier, de dossier",
+                "Configuration monoposte et réseau local",
+                "Typologies réseau (LAN, MAN, WAN)"
+              ],
+              "savoir_faire": [
+                "Distinguer les différents constituants d'un S.I",
+                "Connecter les principaux périphériques externes (clavier, souris...)",
+                "Schématiser un ordinateur"
+              ],
+              "savoir_etre": [
+                "Préserver le matériel",
+                "Respecter les consignes de sécurité",
+                "Convivialité",
+                "Organisation"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "DA_TRAITEMENT",
+        "name": "Traitement",
+        "competencies": [
+          {
+            "code": "C11",
+            "statement": "Produire un document Multimédia",
+            "resources": {
+              "savoir": [
+                "Utilitaires (dessin, image, son)",
+                "Texteur (traitement de textes)",
+                "Diapositive / diaporama",
+                "Hyperlien",
+                "Multimédia"
+              ],
+              "savoir_faire": [
+                "Créer un fichier texte",
+                "Créer un fichier dessin/image",
+                "Créer un fichier son",
+                "Créer un diaporama",
+                "Créer un document avec des hyperliens",
+                "Intégrer des objets de différents formats dans un même document"
+              ],
+              "savoir_etre": [
+                "Esthétique",
+                "Créativité",
+                "Organisation"
+              ]
+            }
+          },
+          {
+            "code": "C12",
+            "statement": "Produire un document de calcul",
+            "resources": {
+              "savoir": [
+                "Tableur",
+                "Feuille de calcul",
+                "Cellule / Types de données",
+                "Adresse",
+                "Formule",
+                "Fonction",
+                "Graphe"
+              ],
+              "savoir_faire": [
+                "Opérer sur une ou plusieurs cellules",
+                "Saisir une formule",
+                "Recopier une formule",
+                "Insérer une fonction",
+                "Différencier une adresse relative d'une adresse absolue",
+                "Créer un graphe"
+              ],
+              "savoir_etre": [
+                "Rigueur",
+                "Esprit d'analyse",
+                "Interprétation"
+              ]
+            }
+          },
+          {
+            "code": "C13",
+            "statement": "Produire un programme informatique",
+            "resources": {
+              "savoir": [
+                "Programme",
+                "Langage de programmation",
+                "Primitives",
+                "Instructions de contrôle",
+                "Exécution d'un programme",
+                "Procédures",
+                "Variables",
+                "Procédures paramétrées"
+              ],
+              "savoir_faire": [
+                "Écrire correctement une instruction",
+                "Écrire une procédure",
+                "Sauvegarder une procédure",
+                "Réutiliser une procédure",
+                "Structurer un programme"
+              ],
+              "savoir_etre": [
+                "Précision",
+                "Rigueur",
+                "Esprit critique",
+                "Curiosité",
+                "Organisation"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "DA_RECHERCHE",
+        "name": "Recherche",
+        "competencies": [
+          {
+            "code": "C21",
+            "statement": "Rechercher des informations sur un support de stockage",
+            "resources": {
+              "savoir": [
+                "Notion de support de stockage",
+                "Arborescence",
+                "Explorateur",
+                "Nom et extension d'un fichier",
+                "Caractères génériques"
+              ],
+              "savoir_faire": [
+                "Accéder au contenu de divers supports (Disque dur, flash USB, CD-ROM)",
+                "Naviguer à l'aide de l'explorateur",
+                "Utiliser correctement la commande de recherche du système d'exploitation",
+                "Faire les opérations requises sur les fichiers trouvés"
+              ],
+              "savoir_etre": [
+                "Sens de l'organisation",
+                "Méthode"
+              ]
+            }
+          },
+          {
+            "code": "C22",
+            "statement": "Rechercher des informations à partir d'un support encyclopédique",
+            "resources": {
+              "savoir": [
+                "Encyclopédie numérique",
+                "Mots clés",
+                "Opérateurs logiques",
+                "Hyperlien"
+              ],
+              "savoir_faire": [
+                "Consulter un support encyclopédique via l'interface utilisateur",
+                "Effectuer une recherche simple ou avancée",
+                "Identifier tout ce qui peut servir lors de la consultation",
+                "Récupérer et utiliser les résultats de la recherche"
+              ],
+              "savoir_etre": [
+                "Regard critique",
+                "Sens de l'analyse",
+                "Comparaison et vérification"
+              ]
+            }
+          },
+          {
+            "code": "C23",
+            "statement": "Rechercher des informations sur le Web",
+            "resources": {
+              "savoir": [
+                "Internet",
+                "Services d'Internet",
+                "Page Web / Site Web",
+                "Adresse de site (URL)",
+                "Navigateur",
+                "Annuaire et Moteur de recherche",
+                "Téléchargement"
+              ],
+              "savoir_faire": [
+                "Accéder à un site via son adresse URL",
+                "Naviguer sur le Web",
+                "Interroger un annuaire ou un moteur de recherche (recherche simple ou avancée)",
+                "Récupérer et exploiter les résultats de recherche"
+              ],
+              "savoir_etre": [
+                "Sens critique",
+                "Respect du droit d'auteur",
+                "Argumentation"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "DA_COMMUNICATION",
+        "name": "Communication",
+        "competencies": [
+          {
+            "code": "C31",
+            "statement": "Exploiter les interfaces graphiques d'un S.E pour interagir avec un système informatique",
+            "resources": {
+              "savoir": [
+                "Interface graphique",
+                "Éléments d'une interface graphique (barres, icônes, boutons, fenêtres)",
+                "Gestion de fichiers et dossiers",
+                "Pavés et touches du clavier"
+              ],
+              "savoir_faire": [
+                "Reconnaître les éléments de l'interface graphique",
+                "Maîtriser les opérations fenêtres, menus, couper/copier/coller",
+                "Utiliser le clavier pour saisir du texte et se déplacer",
+                "Créer, ouvrir, enregistrer et organiser des dossiers et fichiers"
+              ],
+              "savoir_etre": [
+                "Esprit logique",
+                "Communication",
+                "Organisation"
+              ]
+            }
+          },
+          {
+            "code": "C32",
+            "statement": "Échanger des informations via un réseau local",
+            "resources": {
+              "savoir": [
+                "Réseau local",
+                "Avantages d'un réseau local (partage de ressources matérielles et logicielles)"
+              ],
+              "savoir_faire": [
+                "Explorer les postes d'un réseau local",
+                "Partager une ressource",
+                "Envoyer et recevoir un fichier d'un poste à un autre",
+                "Communiquer instantanément sur le réseau"
+              ],
+              "savoir_etre": [
+                "Collaboration",
+                "Partage",
+                "Respect d'autrui"
+              ]
+            }
+          },
+          {
+            "code": "C33",
+            "statement": "Utiliser la messagerie électronique pour échanger des informations",
+            "resources": {
+              "savoir": [
+                "Courrier électronique",
+                "Logiciel de messagerie / Webmail",
+                "Compte et adresse de courrier électronique",
+                "Fichier attaché / pièce jointe"
+              ],
+              "savoir_faire": [
+                "Créer un compte de messagerie",
+                "Composer et envoyer un message simple ou avec pièce jointe",
+                "Consulter la boîte de réception et lire un message",
+                "Télécharger un fichier attaché"
+              ],
+              "savoir_etre": [
+                "Éthique de communication",
+                "Collaboration",
+                "Respect des règles de correspondance"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "didactic_programs_by_level": {
+    "1AC": {
+      "level_name": "1ère Année du Cycle Secondaire Collégial",
+      "targeted_competencies": [
+        "C0",
+        "C11",
+        "C21",
+        "C22",
+        "C31"
+      ],
+      "total_hours": 30,
+      "units": [
+        {
+          "unit_id": "U1",
+          "title": "Système informatique et Système d'exploitation",
+          "sub_modules": [
+            {
+              "topic_id": "1AC_U1_M1",
+              "topic": "Système informatique (Concepts de base, matériel, logiciels, connectivité)",
+              "competency": "C0",
+              "allocated_hours": 4,
+              "competency_codes": [
+                "C0"
+              ]
+            },
+            {
+              "topic_id": "1AC_U1_M2",
+              "topic": "Système d'exploitation (Interface graphique, fenêtres, bureau, gestion fichiers/dossiers)",
+              "competency": "C31",
+              "allocated_hours": 4,
+              "competency_codes": [
+                "C31"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U2",
+          "title": "Production de documents Multimédia et Traitement de texte",
+          "sub_modules": [
+            {
+              "topic_id": "1AC_U2_M1",
+              "topic": "Utilitaires graphiques et sonores (Fichiers dessin et fichiers audio)",
+              "competency": "C11",
+              "allocated_hours": 2,
+              "competency_codes": [
+                "C11"
+              ]
+            },
+            {
+              "topic_id": "1AC_U2_M2",
+              "topic": "Traitement de textes (Saisie, correction, mise en forme, mise en page, impression, liens hypertextes)",
+              "competency": "C11",
+              "allocated_hours": 14,
+              "competency_codes": [
+                "C11"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U3",
+          "title": "Recherches documentaires",
+          "sub_modules": [
+            {
+              "topic_id": "1AC_U3_M1",
+              "topic": "Recherche sur support de stockage et recherche sur encyclopédie numérique",
+              "competency": "C21, C22",
+              "allocated_hours": 6,
+              "competency_codes": [
+                "C21",
+                "C22"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2AC": {
+      "level_name": "2ème Année du Cycle Secondaire Collégial",
+      "targeted_competencies": [
+        "C0",
+        "C12",
+        "C13",
+        "C31",
+        "C32"
+      ],
+      "total_hours": 30,
+      "units": [
+        {
+          "unit_id": "U1",
+          "title": "Environnement matériel et système d'exploitation réseau",
+          "sub_modules": [
+            {
+              "topic_id": "2AC_U1_M1",
+              "topic": "Configuration monoposte et réseau local matériel",
+              "competency": "C0",
+              "allocated_hours": 4,
+              "competency_codes": [
+                "C0"
+              ]
+            },
+            {
+              "topic_id": "2AC_U1_M2",
+              "topic": "Système d'exploitation réseau et gestion des utilisateurs",
+              "competency": "C31",
+              "allocated_hours": 2,
+              "competency_codes": [
+                "C31"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U2",
+          "title": "Échange d'informations dans un réseau local",
+          "sub_modules": [
+            {
+              "topic_id": "2AC_U2_M1",
+              "topic": "Partage des ressources matérielles/logicielles et envoi/réception de messages",
+              "competency": "C32",
+              "allocated_hours": 2,
+              "competency_codes": [
+                "C32"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U3",
+          "title": "Tableurs",
+          "sub_modules": [
+            {
+              "topic_id": "2AC_U3_M1",
+              "topic": "Gestion d'un classeur, feuilles, cellules, adresses relatives/absolues, formules, fonctions, graphiques, impression",
+              "competency": "C12",
+              "allocated_hours": 12,
+              "competency_codes": [
+                "C12"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U4",
+          "title": "Programmation Logo",
+          "sub_modules": [
+            {
+              "topic_id": "2AC_U4_M1",
+              "topic": "Langage Logo, primitives de base, instruction de répétition (POURQUOI/REPETER), écriture et réutilisation de procédures",
+              "competency": "C13",
+              "allocated_hours": 10,
+              "competency_codes": [
+                "C13"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3AC": {
+      "level_name": "3ème Année du Cycle Secondaire Collégial",
+      "targeted_competencies": [
+        "C0",
+        "C11",
+        "C13",
+        "C23",
+        "C33"
+      ],
+      "total_hours": 30,
+      "units": [
+        {
+          "unit_id": "U1",
+          "title": "Réseaux informatiques et typologie",
+          "sub_modules": [
+            {
+              "topic_id": "3AC_U1_M1",
+              "topic": "Typologie des réseaux (LAN, MAN, WAN)",
+              "competency": "C0",
+              "allocated_hours": 2,
+              "competency_codes": [
+                "C0"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U2",
+          "title": "Présentation assistée par ordinateur (PAO / Diaporama)",
+          "sub_modules": [
+            {
+              "topic_id": "3AC_U2_M1",
+              "topic": "Création de diaporamas, animations, transitions, insertion d'objets multimédias, liens hypertextes",
+              "competency": "C11",
+              "allocated_hours": 10,
+              "competency_codes": [
+                "C11"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U3",
+          "title": "Programmation Logo avancée",
+          "sub_modules": [
+            {
+              "topic_id": "3AC_U3_M1",
+              "topic": "Variables, procédures paramétrées, structuration d'un projet de programmation",
+              "competency": "C13",
+              "allocated_hours": 8,
+              "competency_codes": [
+                "C13"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U4",
+          "title": "Recherches documentaires sur le Web",
+          "sub_modules": [
+            {
+              "topic_id": "3AC_U4_M1",
+              "topic": "Internet, Web, URL, navigateurs, moteurs de recherche et évaluation critique des sources",
+              "competency": "C23",
+              "allocated_hours": 6,
+              "competency_codes": [
+                "C23"
+              ]
+            }
+          ]
+        },
+        {
+          "unit_id": "U5",
+          "title": "Messagerie électronique",
+          "sub_modules": [
+            {
+              "topic_id": "3AC_U5_M1",
+              "topic": "Comptes de messagerie, composition, gestion des pièces jointes et nétiquette",
+              "competency": "C33",
+              "allocated_hours": 4,
+              "competency_codes": [
+                "C33"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

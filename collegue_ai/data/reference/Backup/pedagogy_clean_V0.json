@@ -1,0 +1,227 @@
+{
+  "schema_version": 2,
+  "source": "Instructions Officielles Informatique Collège (2006) + institutional_memory (cleaned)",
+
+  "institutional_context": {
+    "country": "Royaume du Maroc",
+    "ministry": "Ministère de l'Éducation Nationale, du Préscolaire et des Sports",
+    "curriculum_reference": "Instructions Officielles Informatique Collège (2006)",
+    "pedagogical_approach": "Approche Par Compétences (APC) et Pédagogie de l'Intégration",
+    "cognitive_integration_mechanisms": {
+      "interiorisation": {
+        "assimilation": "Incorporation directe d'une connaissance, d'une habileté ou d'une attitude.",
+        "modelisation": "Mise en relation et coordination des connaissances pour structurer un nouvel ensemble cohérent."
+      },
+      "exteriorisation": {
+        "application": "Mobilisation des acquis assimilés et modélisés dans un contexte concret et familier.",
+        "transfert": "Mobilisation d'un ensemble complexe d'acquis dans une situation et un contexte totalement inédits."
+      }
+    }
+  },
+
+  "competencies_taxonomy": {
+    "domaines_action": ["Culture informatique / Traitement", "Recherche documentaire", "Communication"],
+    "competencies_list": {
+      "C0": {
+        "domaine": "Culture informatique",
+        "intitule": "Maîtriser les technologies de base relatives au fonctionnement d'un système informatique",
+        "savoir": ["Constituants d'un système informatique","Fonctions de chaque constituant","Notion de logiciel, de fichier et de dossier","Configuration monoposte vs réseau local (LAN, MAN, WAN)"],
+        "savoir_faire": ["Distinguer les différents constituants d'un S.I","Connecter les principaux périphériques externes","Schématiser l'architecture fonctionnelle d'un ordinateur","Mettre en marche et éteindre convenablement l'équipement"],
+        "savoir_etre": ["Préservation du matériel","Respect strict des consignes de sécurité","Organisation et rigueur"]
+      },
+      "C11": {
+        "domaine": "Traitement",
+        "intitule": "Produire un document Multimédia",
+        "savoir": ["Utilitaires (dessin, image, son)","Texteur et traitement de texte","Diapositive, diaporama et animations","Hyperliens et multimédia"],
+        "savoir_faire": ["Créer et manipuler des fichiers texte, dessin, image et son","Mettre en forme, en page et imprimer un document","Créer un diaporama interactif avec animations","Créer des liens hypertextes et intégrer des objets hétérogènes"],
+        "savoir_etre": ["Sens de l'esthétique et créativité","Convivialité et organisation","Esprit de synthèse"]
+      },
+      "C12": {
+        "domaine": "Traitement",
+        "intitule": "Produire un document de calcul",
+        "savoir": ["Tableur et classeur","Feuille de calcul, cellules et types de données","Adresses relatives vs absolues","Formules, fonctions prédéfinies et graphiques"],
+        "savoir_faire": ["Opérer sur une ou plusieurs cellules","Saisir et recopier des formules","Insérer des fonctions prédéfinies","Différencier adressage relatif/absolu","Générer et interpréter un graphique"],
+        "savoir_etre": ["Précision et rigueur d'analyse","Capacité d'interprétation","Sens de l'organisation"]
+      },
+      "C13": {
+        "domaine": "Traitement",
+        "intitule": "Produire un programme informatique",
+        "savoir": ["Notion de programme et de langage (Logo / Blocs)","Primitives et instructions de contrôle (boucles)","Variables et types","Procédures et sous-programmes paramétrés"],
+        "savoir_faire": ["Écrire des instructions et primitives","Utiliser des structures de répétition","Déclarer et manipuler des variables","Écrire et réutiliser des procédures paramétrées","Structurer, tester et déboguer"],
+        "savoir_etre": ["Rigueur logique et abstraction","Persévérance face à l'erreur","Curiosité algorithmique"]
+      },
+      "C21": {
+        "domaine": "Recherche",
+        "intitule": "Rechercher des informations sur un support de stockage",
+        "savoir": ["Supports de stockage","Arborescence, dossiers, fichiers, extensions","Explorateur et caractères génériques"],
+        "savoir_faire": ["Accéder aux contenus des supports","Naviguer dans une arborescence","Rechercher avec filtres et caractères génériques","Copier, déplacer, renommer des fichiers"],
+        "savoir_etre": ["Sens de l'organisation","Gestion ordonnée de l'espace numérique"]
+      },
+      "C22": {
+        "domaine": "Recherche",
+        "intitule": "Rechercher des informations à partir d'un support encyclopédique",
+        "savoir": ["Encyclopédie numérique hors-ligne","Mots-clés et opérateurs logiques","Hyperliens documentaires"],
+        "savoir_faire": ["Consulter une encyclopédie","Formuler des requêtes simples/avancées","Extraire et réinvestir les résultats"],
+        "savoir_etre": ["Esprit critique","Capacité d'analyse et de comparaison"]
+      },
+      "C23": {
+        "domaine": "Recherche",
+        "intitule": "Rechercher des informations sur le Web",
+        "savoir": ["Internet, Web, pages et sites","URL, navigateurs, moteurs et annuaires","Téléchargement et droits d'auteur"],
+        "savoir_faire": ["Accéder à un site via URL","Naviguer via hyperliens","Interroger un moteur avec mots-clés","Télécharger et vérifier des ressources"],
+        "savoir_etre": ["Sens critique face aux sources","Respect de la propriété intellectuelle"]
+      },
+      "C31": {
+        "domaine": "Communication",
+        "intitule": "Exploiter les interfaces graphiques d'un S.E",
+        "savoir": ["GUI, bureau, fenêtres, menus","Organisation du clavier","Gestion des fichiers et répertoires"],
+        "savoir_faire": ["Maîtriser les actions souris","Utiliser le clavier et raccourcis","Manipuler les fenêtres","Créer et organiser dossiers/fichiers"],
+        "savoir_etre": ["Autonomie de manipulation","Sens logique et méthode"]
+      },
+      "C32": {
+        "domaine": "Communication",
+        "intitule": "Échanger des informations via un réseau local",
+        "savoir": ["Réseau local (LAN) et topologies","Partage de ressources","Partage et droits d'accès"],
+        "savoir_faire": ["Explorer dossiers/imprimantes partagés","Partager une ressource","Transférer des fichiers","Utiliser une messagerie locale"],
+        "savoir_etre": ["Esprit de collaboration","Respect de la confidentialité"]
+      },
+      "C33": {
+        "domaine": "Communication",
+        "intitule": "Utiliser la messagerie électronique",
+        "savoir": ["Email et structure d'adresse","Webmail","Pièces jointes, boîtes de réception"],
+        "savoir_faire": ["Créer/configurer une boîte","Composer, envoyer, répondre","Attacher/télécharger des pièces jointes","Gérer sa boîte"],
+        "savoir_etre": ["Nétiquette","Vigilance face aux spams"]
+      }
+    }
+  },
+
+  "curricular_matrix_by_level": {
+    "1AC": {
+      "volume_horaire_total": 30,
+      "competences_cibles": ["C0","C11","C21","C22","C31"],
+      "unites": [
+        {"unit_id": "U1", "title": "Système informatique & Système d'exploitation", "volume_horaire": 8, "competences": ["C0","C31"], "ressources": ["Information et traitement automatique","Système informatique (matériel/logiciel)","Connectique et périphériques","S.E et gestion des fenêtres","Bureau et utilitaires de base"]},
+        {"unit_id": "U2", "title": "Production de documents (Texteur & Multimédia)", "volume_horaire": 16, "competences": ["C11"], "ressources": ["Fichiers graphiques","Fichiers audio","Traitement de texte : gestion de documents","Saisie, correction, mise en forme","Mise en page, tableaux, images, liens, impression"]},
+        {"unit_id": "U3", "title": "Recherche documentaire", "volume_horaire": 6, "competences": ["C21","C22"], "ressources": ["Recherche sur supports locaux/amovibles","Recherche par nom/extension/contenu","Recherche sur encyclopédies numériques"]}
+      ]
+    },
+    "2AC": {
+      "volume_horaire_total": 30,
+      "competences_cibles": ["C0","C12","C13","C31","C32"],
+      "unites": [
+        {"unit_id": "U1", "title": "Environnement matériel & Réseau local", "volume_horaire": 6, "competences": ["C0","C31"], "ressources": ["Monoposte vs LAN","Connectique réseau","S.E réseau et comptes","Partage de ressources"]},
+        {"unit_id": "U2", "title": "Échange d'informations en réseau local", "volume_horaire": 2, "competences": ["C32"], "ressources": ["Dossiers partagés","Messagerie instantanée locale"]},
+        {"unit_id": "U3", "title": "Traitement de données (Tableur)", "volume_horaire": 12, "competences": ["C12"], "ressources": ["Classeur et feuille de calcul","Cellules, plages, types","Formules arithmétiques","Fonctions SOMME/MOYENNE/MAX/MIN","Adressage relatif/absolu","Graphiques et impression"]},
+        {"unit_id": "U4", "title": "Initiation à la programmation (Logo / Blocs)", "volume_horaire": 10, "competences": ["C13"], "ressources": ["Algorithme et environnement","Primitives graphiques","Boucle REPETE","Procédures simples"]}
+      ]
+    },
+    "3AC": {
+      "volume_horaire_total": 30,
+      "competences_cibles": ["C0","C11","C13","C23","C33"],
+      "unites": [
+        {"unit_id": "U1", "title": "Typologie des réseaux", "volume_horaire": 2, "competences": ["C0"], "ressources": ["LAN, MAN, WAN"]},
+        {"unit_id": "U2", "title": "Présentation assistée par ordinateur", "volume_horaire": 10, "competences": ["C11"], "ressources": ["Diaporama et diapositives","Objets multimédias","Animations et transitions","Boutons d'action et hyperliens"]},
+        {"unit_id": "U3", "title": "Programmation structurée et modulaire", "volume_horaire": 8, "competences": ["C13"], "ressources": ["Variables et affectation","Procédures paramétrées","Décomposition modulaire"]},
+        {"unit_id": "U4", "title": "Recherche documentaire sur le Web", "volume_horaire": 6, "competences": ["C23"], "ressources": ["Web, sites, URL","Navigateurs et moteurs","Recherche avancée","Téléchargement critique"]},
+        {"unit_id": "U5", "title": "Messagerie électronique", "volume_horaire": 4, "competences": ["C33"], "ressources": ["Fonctionnement email","Webmail","Composition/envoi/réception","Pièces jointes et éthique"]}
+      ]
+    }
+  },
+
+  "didactic_methodologies": {
+    "problem_based_learning_pbl": {
+      "definition": "Confronter l'élève à une situation-problème nécessitant l'acquisition/coordination de ressources.",
+      "operational_steps": ["Confrontation au problème","Émergence des questions pendantes","Hiérarchisation et répartition des recherches","Recherche et intégration des connaissances","Synthèse, validation, institutionnalisation"]
+    },
+    "project_based_pedagogy": {
+      "definition": "Projet authentique débouchant sur une production concrète.",
+      "four_phases": ["Recherche","Planification","Réalisation","Évaluation"]
+    },
+    "demonstrative_method": {
+      "sequence": ["Montrer","Faire","Dire"]
+    },
+    "guided_discovery_method": {
+      "sequence": ["Faire (tâtonnement)","Dire (explicitation)","Reformulation et cadrage"]
+    },
+    "interrogative_method": {
+      "objective": "Questionnement pour faire émerger les représentations et guider la déduction."
+    },
+    "expositive_method": {
+      "objective": "Exposé bref pour éléments théoriques non déductibles."
+    }
+  },
+
+  "pedagogical_planning_framework": {
+    "three_moments_of_learning": [
+      {"moment": "1. Apprentissages ponctuels de ressources", "target": "Acquisition ciblée des savoirs, savoir-faire et attitudes."},
+      {"moment": "2. Activités d'intégration", "target": "Mobilisation coordonnée face à une situation-problème ou mini-projet."},
+      {"moment": "3. Activités d'évaluation et régulation", "target": "Diagnostic, formative continue et remédiation."}
+    ],
+    "three_mandatory_preparation_files": {
+      "fiche_ressources": {
+        "description": "Planifie une séquence d'acquisition de ressources.",
+        "template_structure": ["Niveau et unité","Compétence(s) et domaine","Ressources ciblées (S/SF/SE)","Prérequis","Matériel et logistique","Scénario (déclencheur, activités, synthèse)","Différenciation et temps machine"]
+      },
+      "fiche_integration": {
+        "description": "Mobilise plusieurs ressources dans une situation complexe.",
+        "template_structure": ["Compétence(s) ciblée(s)","Situation-problème","Consignes opérationnelles","Ressources à mobiliser","Organisation et livrable"]
+      },
+      "fiche_evaluation": {
+        "description": "Évaluation basée sur une situation inédite et critériée.",
+        "template_structure": ["Compétence(s) à évaluer","Situation inédite","Grille critériée (minimaux/perfectionnement)","Indicateurs et barème"]
+      }
+    }
+  },
+
+  "evaluation_rules_and_norms": {
+    "diagnostic_evaluation": {
+      "moment": "Début de cycle/semestre/unité",
+      "target": "Identifier acquis et représentations erronées."
+    },
+    "formative_evaluation": {
+      "frequency": "Au moins 2 par semestre",
+      "duration": "Maximum 20 minutes",
+      "focus": "Maîtrise des ressources pour régulation immédiate.",
+      "error_philosophy": "Droit à l'erreur ; point de départ de la remédiation."
+    },
+    "summative_evaluation": {
+      "frequency": "1 par semestre",
+      "duration": "Environ 55 minutes",
+      "format": "Situation complexe de résolution de problèmes.",
+      "criteria_rules": ["Limiter le nombre de critères","Distinguer minimaux/perfectionnement","Vérifier chaque critère 2-3 fois via indicateurs indépendants"]
+    }
+  },
+
+  "competency_specific_didactic_orientations": {
+    "C0_and_C31": ["Étaler la découverte sur plusieurs séances","Angle fonctionnel (pas technologique abstrait)","Schémas illustratifs","Gestes corrects (allumage, souris, posture)"],
+    "C11_and_C12": ["Centrer sur l'usage, pas l'interface","Supports courts et concrets","Éviter le pas-à-pas passif","Articuler avec projets concrets"],
+    "C13": ["Raisonnement et décomposition avant syntaxe","Créer le besoin avant chaque structure","Modularité et réutilisation","Anticiper et autocorriger (débogage)"],
+    "C21_C22_C23": ["Situations réelles interdisciplinaires","Esprit critique sur les sources","Méthodologie de recherche","Droits d'auteur et filtrage"],
+    "C32_C33": ["Partage réseau concret","Emails scolaires encadrés","Nétiquette et vigilance"]
+  },
+
+  "laboratory_management_guidelines": [
+    "Binômes homogènes/semi-hétérogènes",
+    "Rotation stricte 25 min clavier/souris",
+    "Espace disque dédié par classe/binôme",
+    "Cahier de cours avec traces écrites institutionnalisées"
+  ],
+
+  "predecessor_teacher_tips": {
+    "didactic_best_practices": [
+      "Privilégier la méthode démonstrative : Montrer → Faire → Dire.",
+      "Imposer des textes courts et concrets pour maximiser la manipulation.",
+      "Problématiser les activités ; éviter les ateliers purement directifs.",
+      "Étaler la découverte de l'outil sur plusieurs séances.",
+      "Envisager de petits projets personnels ou d'équipe.",
+      "Inciter les apprenants à déceler leurs erreurs et à les corriger."
+    ],
+    "laboratory_management": [
+      "Binômes homogènes pour les TP dirigés ; semi-hétérogènes pour les projets.",
+      "Rotation stricte clavier/souris : 25 min par élève.",
+      "Un élève « tuteur » par rangée pour les pannes simples.",
+      "Fiche d'aide pas-à-pas pour les élèves en difficulté ; défi supplémentaire pour les rapides.",
+      "Éduquer à la préservation du matériel et aux consignes de sécurité."
+    ]
+  }
+}

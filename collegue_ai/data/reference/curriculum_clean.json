@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "institutional_reference": "Instructions Officielles Informatique Collège (2006)",
+
+  "competency_framework": {
+    "domains_of_action": [
+      { "name": "Culture informatique / Traitement", "competencies": [
+        { "code": "C0", "statement": "Maîtriser les technologies de base relatives au fonctionnement d'un système informatique",
+          "resources": { "savoir": ["Constituants d'un système informatique","Fonctions de chaque constituant","Notion de logiciel, de fichier et de dossier","Configuration monoposte vs réseau local (LAN, MAN, WAN)"],
+          "savoir_faire": ["Distinguer les différents constituants d'un S.I","Connecter les principaux périphériques externes","Schématiser l'architecture fonctionnelle d'un ordinateur","Mettre en marche et éteindre convenablement l'équipement"],
+          "savoir_etre": ["Préservation du matériel","Respect strict des consignes de sécurité","Organisation et rigueur"] } },
+        { "code": "C11", "statement": "Produire un document Multimédia",
+          "resources": { "savoir": ["Utilitaires (dessin, image, son)","Texteur et traitement de texte","Diapositive, diaporama et animations","Hyperliens et multimédia"],
+          "savoir_faire": ["Créer et manipuler des fichiers texte, dessin, image et son","Mettre en forme, en page et imprimer un document","Créer un diaporama interactif avec animations","Créer des liens hypertextes et intégrer des objets hétérogènes"],
+          "savoir_etre": ["Sens de l'esthétique et créativité","Convivialité et organisation","Esprit de synthèse"] } },
+        { "code": "C12", "statement": "Produire un document de calcul",
+          "resources": { "savoir": ["Tableur et classeur","Feuille de calcul, cellules et types de données","Adresses relatives vs absolues","Formules, fonctions prédéfinies et graphiques"],
+          "savoir_faire": ["Opérer sur une ou plusieurs cellules","Saisir et recopier des formules","Insérer des fonctions prédéfinies","Différencier adressage relatif/absolu","Générer et interpréter un graphique"],
+          "savoir_etre": ["Précision et rigueur d'analyse","Capacité d'interprétation","Sens de l'organisation"] } },
+        { "code": "C13", "statement": "Produire un programme informatique",
+          "resources": { "savoir": ["Notion de programme et de langage (Logo / Blocs)","Primitives et instructions de contrôle (boucles)","Variables et types","Procédures et sous-programmes paramétrés"],
+          "savoir_faire": ["Écrire des instructions et primitives","Utiliser des structures de répétition","Déclarer et manipuler des variables","Écrire et réutiliser des procédures paramétrées","Structurer, tester et déboguer"],
+          "savoir_etre": ["Rigueur logique et abstraction","Persévérance face à l'erreur","Curiosité algorithmique"] } }
+      ]},
+      { "name": "Recherche documentaire", "competencies": [
+        { "code": "C21", "statement": "Rechercher des informations sur un support de stockage",
+          "resources": { "savoir": ["Supports de stockage","Arborescence, dossiers, fichiers, extensions","Explorateur et caractères génériques"],
+          "savoir_faire": ["Accéder aux contenus des supports","Naviguer dans une arborescence","Rechercher avec filtres et caractères génériques","Copier, déplacer, renommer des fichiers"],
+          "savoir_etre": ["Sens de l'organisation","Gestion ordonnée de l'espace numérique"] } },
+        { "code": "C22", "statement": "Rechercher des informations à partir d'un support encyclopédique",
+          "resources": { "savoir": ["Encyclopédie numérique hors-ligne","Mots-clés et opérateurs logiques","Hyperliens documentaires"],
+          "savoir_faire": ["Consulter une encyclopédie","Formuler des requêtes simples/avancées","Extraire et réinvestir les résultats"],
+          "savoir_etre": ["Esprit critique","Capacité d'analyse et de comparaison"] } },
+        { "code": "C23", "statement": "Rechercher des informations sur le Web",
+          "resources": { "savoir": ["Internet, Web, pages et sites","URL, navigateurs, moteurs et annuaires","Téléchargement et droits d'auteur"],
+          "savoir_faire": ["Accéder à un site via URL","Naviguer via hyperliens","Interroger un moteur avec mots-clés","Télécharger et vérifier des ressources"],
+          "savoir_etre": ["Sens critique face aux sources","Respect de la propriété intellectuelle"] } }
+      ]},
+      { "name": "Communication", "competencies": [
+        { "code": "C31", "statement": "Exploiter les interfaces graphiques d'un S.E",
+          "resources": { "savoir": ["GUI, bureau, fenêtres, menus","Organisation du clavier","Gestion des fichiers et répertoires"],
+          "savoir_faire": ["Maîtriser les actions souris","Utiliser le clavier et raccourcis","Manipuler les fenêtres","Créer et organiser dossiers/fichiers"],
+          "savoir_etre": ["Autonomie de manipulation","Sens logique et méthode"] } },
+        { "code": "C32", "statement": "Échanger des informations via un réseau local",
+          "resources": { "savoir": ["Réseau local (LAN) et topologies","Partage de ressources","Partage et droits d'accès"],
+          "savoir_faire": ["Explorer dossiers/imprimantes partagés","Partager une ressource","Transférer des fichiers","Utiliser une messagerie locale"],
+          "savoir_etre": ["Esprit de collaboration","Respect de la confidentialité"] } },
+        { "code": "C33", "statement": "Utiliser la messagerie électronique",
+          "resources": { "savoir": ["Email et structure d'adresse","Webmail","Pièces jointes, boîtes de réception"],
+          "savoir_faire": ["Créer/configurer une boîte","Composer, envoyer, répondre","Attacher/télécharger des pièces jointes","Gérer sa boîte"],
+          "savoir_etre": ["Nétiquette","Vigilance face aux spams"] } }
+      ]}
+    ]
+  },
+
+  "didactic_programs_by_level": {
+    "1AC": { "level_name": "1ère Année Collège", "total_hours": 30,
+      "targeted_competencies": ["C0","C11","C21","C22","C31"],
+      "units": [
+        { "unit_id": "U1", "title": "Système informatique & Système d'exploitation", "sub_modules": [
+          { "topic_id": "1AC_U1_SM1", "topic": "Information et traitement automatique", "allocated_hours": 2, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": [] },
+          { "topic_id": "1AC_U1_SM2", "topic": "Système informatique (matériel/logiciel)", "allocated_hours": 2, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM1"] },
+          { "topic_id": "1AC_U1_SM3", "topic": "Connectique et périphériques", "allocated_hours": 1, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM2"] },
+          { "topic_id": "1AC_U1_SM4", "topic": "S.E et gestion des fenêtres", "allocated_hours": 2, "competency_codes": ["C31"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM1"] },
+          { "topic_id": "1AC_U1_SM5", "topic": "Bureau et utilitaires de base", "allocated_hours": 1, "competency_codes": ["C31"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM4"] } ]},
+        { "unit_id": "U2", "title": "Production de documents (Texteur & Multimédia)", "sub_modules": [
+          { "topic_id": "1AC_U2_SM1", "topic": "Fichiers graphiques", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM5"] },
+          { "topic_id": "1AC_U2_SM2", "topic": "Fichiers audio", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM5"] },
+          { "topic_id": "1AC_U2_SM3", "topic": "Traitement de texte : gestion de documents", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U1_SM5"] },
+          { "topic_id": "1AC_U2_SM4", "topic": "Saisie, correction, mise en forme", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U2_SM3"] },
+          { "topic_id": "1AC_U2_SM5", "topic": "Mise en page, tableaux, images, liens, impression", "allocated_hours": 4, "competency_codes": ["C11"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U2_SM4"] } ]},
+        { "unit_id": "U3", "title": "Recherche documentaire", "sub_modules": [
+          { "topic_id": "1AC_U3_SM1", "topic": "Recherche sur supports locaux/amovibles", "allocated_hours": 2, "competency_codes": ["C21"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U1_SM5"] },
+          { "topic_id": "1AC_U3_SM2", "topic": "Recherche par nom/extension/contenu", "allocated_hours": 2, "competency_codes": ["C21"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U3_SM1"] },
+          { "topic_id": "1AC_U3_SM3", "topic": "Recherche sur encyclopédies numériques", "allocated_hours": 2, "competency_codes": ["C22"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U3_SM1"] } ]}
+      ]},
+    "2AC": { "level_name": "2ème Année Collège", "total_hours": 30,
+      "targeted_competencies": ["C0","C12","C13","C31","C32"],
+      "units": [
+        { "unit_id": "U1", "title": "Environnement matériel & Réseau local", "sub_modules": [
+          { "topic_id": "2AC_U1_SM1", "topic": "Monoposte vs LAN", "allocated_hours": 2, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM1","1AC_U1_SM2"] },
+          { "topic_id": "2AC_U1_SM2", "topic": "Connectique réseau", "allocated_hours": 2, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U1_SM1","1AC_U1_SM3"] },
+          { "topic_id": "2AC_U1_SM3", "topic": "S.E réseau et comptes", "allocated_hours": 1, "competency_codes": ["C31"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U1_SM4"] },
+          { "topic_id": "2AC_U1_SM4", "topic": "Partage de ressources", "allocated_hours": 1, "competency_codes": ["C31"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U1_SM3"] } ]},
+        { "unit_id": "U2", "title": "Échange d'informations en réseau local", "sub_modules": [
+          { "topic_id": "2AC_U2_SM1", "topic": "Dossiers partagés", "allocated_hours": 1, "competency_codes": ["C32"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U1_SM4"] },
+          { "topic_id": "2AC_U2_SM2", "topic": "Messagerie instantanée locale", "allocated_hours": 1, "competency_codes": ["C32"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U2_SM1"] } ]},
+        { "unit_id": "U3", "title": "Traitement de données (Tableur)", "sub_modules": [
+          { "topic_id": "2AC_U3_SM1", "topic": "Classeur et feuille de calcul", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U2_SM3"] },
+          { "topic_id": "2AC_U3_SM2", "topic": "Cellules, plages, types", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U3_SM1"] },
+          { "topic_id": "2AC_U3_SM3", "topic": "Formules arithmétiques", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U3_SM2"] },
+          { "topic_id": "2AC_U3_SM4", "topic": "Fonctions SOMME/MOYENNE/MAX/MIN", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U3_SM3"] },
+          { "topic_id": "2AC_U3_SM5", "topic": "Adressage relatif/absolu", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U3_SM4"] },
+          { "topic_id": "2AC_U3_SM6", "topic": "Graphiques et impression", "allocated_hours": 2, "competency_codes": ["C12"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U3_SM4"] } ]},
+        { "unit_id": "U4", "title": "Initiation à la programmation (Logo / Blocs)", "sub_modules": [
+          { "topic_id": "2AC_U4_SM1", "topic": "Algorithme et environnement", "allocated_hours": 2, "competency_codes": ["C13"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["1AC_U1_SM4"] },
+          { "topic_id": "2AC_U4_SM2", "topic": "Primitives graphiques", "allocated_hours": 3, "competency_codes": ["C13"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U4_SM1"] },
+          { "topic_id": "2AC_U4_SM3", "topic": "Boucle REPETE", "allocated_hours": 3, "competency_codes": ["C13"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U4_SM2"] },
+          { "topic_id": "2AC_U4_SM4", "topic": "Procédures simples", "allocated_hours": 2, "competency_codes": ["C13"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U4_SM3"] } ]}
+      ]},
+    "3AC": { "level_name": "3ème Année Collège", "total_hours": 30,
+      "targeted_competencies": ["C0","C11","C13","C23","C33"],
+      "units": [
+        { "unit_id": "U1", "title": "Typologie des réseaux", "sub_modules": [
+          { "topic_id": "3AC_U1_SM1", "topic": "LAN, MAN, WAN", "allocated_hours": 2, "competency_codes": ["C0"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["2AC_U1_SM1"] } ]},
+        { "unit_id": "U2", "title": "Présentation assistée par ordinateur", "sub_modules": [
+          { "topic_id": "3AC_U2_SM1", "topic": "Diaporama et diapositives", "allocated_hours": 2, "competency_codes": ["C11"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U2_SM1"] },
+          { "topic_id": "3AC_U2_SM2", "topic": "Objets multimédias", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 1, "period": "P1", "eval_milestone": "S1_CC", "prerequisites": ["3AC_U2_SM1","1AC_U2_SM2"] },
+          { "topic_id": "3AC_U2_SM3", "topic": "Animations et transitions", "allocated_hours": 3, "competency_codes": ["C11"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["3AC_U2_SM2"] },
+          { "topic_id": "3AC_U2_SM4", "topic": "Boutons d'action et hyperliens", "allocated_hours": 2, "competency_codes": ["C11"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["3AC_U2_SM3","1AC_U2_SM5"] } ]},
+        { "unit_id": "U3", "title": "Programmation structurée et modulaire", "sub_modules": [
+          { "topic_id": "3AC_U3_SM1", "topic": "Variables et affectation", "allocated_hours": 2, "competency_codes": ["C13"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U4_SM1","2AC_U4_SM2"] },
+          { "topic_id": "3AC_U3_SM2", "topic": "Procédures paramétrées", "allocated_hours": 3, "competency_codes": ["C13"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U4_SM4","3AC_U3_SM1"] },
+          { "topic_id": "3AC_U3_SM3", "topic": "Décomposition modulaire", "allocated_hours": 3, "competency_codes": ["C13"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U3_SM2"] } ]},
+        { "unit_id": "U4", "title": "Recherche documentaire sur le Web", "sub_modules": [
+          { "topic_id": "3AC_U4_SM1", "topic": "Web, sites, URL", "allocated_hours": 2, "competency_codes": ["C23"], "semester": 1, "period": "P2", "eval_milestone": "S1_CC", "prerequisites": ["1AC_U3_SM1"] },
+          { "topic_id": "3AC_U4_SM2", "topic": "Navigateurs et moteurs", "allocated_hours": 2, "competency_codes": ["C23"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U4_SM1"] },
+          { "topic_id": "3AC_U4_SM3", "topic": "Recherche avancée", "allocated_hours": 1, "competency_codes": ["C23"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U4_SM2","1AC_U3_SM2"] },
+          { "topic_id": "3AC_U4_SM4", "topic": "Téléchargement critique", "allocated_hours": 1, "competency_codes": ["C23"], "semester": 2, "period": "P1", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U4_SM3"] } ]},
+        { "unit_id": "U5", "title": "Messagerie électronique", "sub_modules": [
+          { "topic_id": "3AC_U5_SM1", "topic": "Fonctionnement email", "allocated_hours": 1, "competency_codes": ["C33"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["2AC_U2_SM1"] },
+          { "topic_id": "3AC_U5_SM2", "topic": "Webmail", "allocated_hours": 1, "competency_codes": ["C33"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U5_SM1"] },
+          { "topic_id": "3AC_U5_SM3", "topic": "Composition/envoi/réception", "allocated_hours": 1, "competency_codes": ["C33"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U5_SM2"] },
+          { "topic_id": "3AC_U5_SM4", "topic": "Pièces jointes et éthique", "allocated_hours": 1, "competency_codes": ["C33"], "semester": 2, "period": "P2", "eval_milestone": "S2_CC", "prerequisites": ["3AC_U5_SM3"] } ]}
+      ]}
+  },
+
+  "competency_specific_didactic_orientations": {
+    "C0_and_C31": ["Étaler la découverte sur plusieurs séances","Angle fonctionnel (pas technologique abstrait)","Schémas illustratifs","Gestes corrects (allumage, souris, posture)"],
+    "C11_and_C12": ["Centrer sur l'usage, pas l'interface","Supports courts et concrets","Éviter le pas-à-pas passif","Articuler avec projets concrets"],
+    "C13": ["Raisonnement et décomposition avant syntaxe","Créer le besoin avant chaque structure","Modularité et réutilisation","Anticiper et autocorriger (débogage)"],
+    "C21_C22_C23": ["Situations réelles interdisciplinaires","Esprit critique sur les sources","Méthodologie de recherche","Droits d'auteur et filtrage"],
+    "C32_C33": ["Partage réseau concret","Emails scolaires encadrés","Nétiquette et vigilance"]
+  }
+}

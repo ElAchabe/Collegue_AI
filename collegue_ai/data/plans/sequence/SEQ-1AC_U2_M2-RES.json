@@ -1,0 +1,74 @@
+{
+  "sequence_plan_id": "SEQ-1AC_U2_M2-RES",
+  "unit_plan_id": "UP-1AC-U2-2026-2027",
+  "level_code": "1AC",
+  "unit_id": "U2",
+  "sub_module_id": "1AC_U2_M2",
+  "sequence_title": "Traitement de textes (Saisie, correction, mise en forme, mise en page, impression, liens hypertextes)",
+  "fiche_type": "fiche_ressources",
+  "competency_codes": [
+    "C11"
+  ],
+  "duration_hours": 14,
+  "template_structure": [
+    "Niveau scolaire et Unité didactique",
+    "Compétence(s) visée(s) et Domaine d'action",
+    "Ressources ciblées (Savoirs, Savoir-faire, Savoir-être)",
+    "Prérequis diagnostiqués",
+    "Matériel et logistique informatique requis",
+    "Déroulement de la séance (Situation déclenchante, Activité pratique, Synthèse institutionnelle/Trace écrite)",
+    "Modalités de différenciation et gestion des binômes"
+  ],
+  "status": "draft",
+  "resources": {
+    "savoir": [
+      "Utilitaires (dessin, image, son)",
+      "Texteur (traitement de textes)",
+      "Diapositive / diaporama",
+      "Hyperlien",
+      "Multimédia"
+    ],
+    "savoir_faire": [
+      "Créer un fichier texte",
+      "Créer un fichier dessin/image",
+      "Créer un fichier son",
+      "Créer un diaporama",
+      "Créer un document avec des hyperliens",
+      "Intégrer des objets de différents formats dans un même document"
+    ],
+    "savoir_etre": [
+      "Esthétique",
+      "Créativité",
+      "Organisation"
+    ]
+  },
+  "prerequisites": [],
+  "material_and_logistics": [
+    "Salle informatique",
+    "Ordinateurs en nombre suffisant (travail en binômes)",
+    "Vidéoprojecteur si disponible",
+    "Cahier de cours pour la trace écrite"
+  ],
+  "deroulement": {
+    "situation_declenchante": "Situation déclenchante",
+    "activite_pratique": "",
+    "synthese_trace_ecrite": ""
+  },
+  "differentiation": [
+    "Binômes homogènes ou semi-hétérogènes",
+    "Rotation stricte du temps machine (règle des 25 min par élève)"
+  ],
+  "methodological_suggestions": [
+    "Centrer l'approche sur l'utilisation du logiciel, non sur le logiciel lui-même.",
+    "Utiliser des documents courts, objectifs et motivants pour les travaux pratiques.",
+    "Problématiser les activités et éviter les ateliers purement directifs.",
+    "Envisager de petits projets personnels ou d'équipe.",
+    "Veiller à ce que chaque apprenant bénéficie d'un temps de manipulation."
+  ],
+  "didactic_best_practices": [
+    "Éviter les exposés magistraux purement théoriques : privilégier la méthode démonstrative (Montrer -> Faire faire -> Faire dire) et la découverte guidée.",
+    "Problématiser systématiquement l'introduction d'un nouvel outil (ex. créer le besoin de répéter une instruction avant d'introduire la boucle Logo).",
+    "En traitement de texte (U2 1AC) et tableur (U3 2AC), imposer des textes courts et concrets pour maximiser le temps de manipulation et d'analyse.",
+    "Exiger la tenue d'un cahier de cours contenant une trace écrite synthétique (résumés, schémas, définitions clés) construite avec les élèves."
+  ]
+}

@@ -1,0 +1,95 @@
+// ==========================================
+// institutional_memory.json
+// ==========================================
+{
+  "institutional_context": {
+    "country": "Royaume du Maroc",
+    "ministry": "Ministère de l'Éducation Nationale, du Préscolaire et des Sports",
+    "pedagogical_approach": "Approche Par Compétences (APC) et Pédagogie de l'Intégration",
+    "curriculum_reference": "Instructions Officielles Informatique Collège (2006) & Arrêté 047.26 (2026/2027)"
+  },
+  "pedagogical_planning_framework": {
+    "three_moments_of_learning": [
+      {
+        "moment": "1. Apprentissages ponctuels de ressources",
+        "target": "Acquisition ciblée des savoirs, savoir-faire techniques et attitudes (savoir-être)."
+      },
+      {
+        "moment": "2. Activités d'intégration",
+        "target": "Mobilisation coordonnée des acquis face à une situation-problème complexe ou un mini-projet."
+      },
+      {
+        "moment": "3. Activités d'évaluation et régulation",
+        "target": "Diagnostic des représentations, évaluation formative continue et remédiation pédagogique."
+      }
+    ],
+    "three_mandatory_preparation_files": {
+      "fiche_ressources": {
+        "description": "Document synthétique définissant les compétences visées, la logistique du laboratoire, les étapes didactiques et le scénario pédagogique.",
+        "template_structure": [
+          "Niveau scolaire et Unité didactique",
+          "Compétence(s) visée(s) et Domaine d'action",
+          "Ressources ciblées (Savoirs, Savoir-faire, Savoir-être)",
+          "Prérequis diagnostiqués",
+          "Matériel et logistique informatique requis",
+          "Déroulement de la séance (Situation déclenchante, Activité pratique, Synthèse institutionnelle/Trace écrite)",
+          "Modalités de différenciation et gestion des binômes"
+        ]
+      },
+      "fiche_integration": {
+        "description": "Arrêt-bilan planifié permettant à l'apprenant d'intégrer plusieurs ressources dans une situation complexe et signifiante.",
+        "template_structure": [
+          "Situation-problème contextualisée (réelle ou réaliste)",
+          "Consignes opérationnelles de travail",
+          "Ressources internes et externes à mobiliser de manière autonome",
+          "Organisation des groupes/binômes et livrable attendu"
+        ]
+      },
+      "fiche_evaluation": {
+        "description": "Dispositif d'évaluation basé sur une situation complexe avec critères d'évaluation explicites et indépendants.",
+        "template_structure": [
+          "Compétence(s) à évaluer",
+          "Énoncé de la situation d'évaluation (inédite pour l'apprenant)",
+          "Grille critériée (Critères minimaux vs Critères de perfectionnement)",
+          "Indicateurs observables de réussite et barème"
+        ]
+      }
+    }
+  },
+  "evaluation_rules_and_norms": {
+    "formative_evaluation": {
+      "frequency": "Au moins 2 évaluations formatives par semestre",
+      "duration": "Maximum 20 minutes par passation",
+      "focus": "Vérification de la maîtrise des ressources (savoirs et savoir-faire) et ajustement immédiat.",
+      "error_philosophy": "Droit à l'erreur: l'erreur est un indicateur cognitif et le point de départ de la remédiation, non une faute pénalisante."
+    },
+    "summative_evaluation": {
+      "frequency": "1 évaluation sommative par semestre (Contrôle Continu)",
+      "duration": "Environ 55 minutes",
+      "format": "Épreuve pratique/théorique basée sur une situation de résolution de problèmes complexes."
+    },
+    "criteria_design_rules": [
+      "Limiter le nombre de critères pour assurer la fidélité et la justesse de la correction.",
+      "Séparer rigoureusement les critères minimaux (maîtrise du seuil) et les critères de perfectionnement (qualité, créativité).",
+      "Vérifier chaque critère au moins 2 à 3 fois au cours de l'épreuve à travers des indicateurs observables indépendants."
+    ]
+  },
+  "predecessor_teacher_tips": {
+    "laboratory_management": [
+      "Adopter systématiquement le travail en binômes homogènes ou semi-hétérogènes pour encourager l'apprentissage par les pairs.",
+      "Instaurer une rotation stricte du temps machine au clavier/souris (règle des 25 min par élève).",
+      "Organiser l'arborescence locale des postes élèves : créer un répertoire dédié par classe et sous-dossiers par binôme pour éviter l'écrasement involontaire des travaux.",
+      "Rappeler systématiquement les consignes de sécurité électrique, la posture ergonomique et la préservation du matériel informatique."
+    ],
+    "didactic_best_practices": [
+      "Éviter les exposés magistraux purement théoriques : privilégier la méthode démonstrative (Montrer -> Faire faire -> Faire dire) et la découverte guidée.",
+      "Problématiser systématiquement l'introduction d'un nouvel outil (ex. créer le besoin de répéter une instruction avant d'introduire la boucle Logo).",
+      "En traitement de texte (U2 1AC) et tableur (U3 2AC), imposer des textes courts et concrets pour maximiser le temps de manipulation et d'analyse.",
+      "Exiger la tenue d'un cahier de cours contenant une trace écrite synthétique (résumés, schémas, définitions clés) construite avec les élèves."
+    ],
+    "robotics_and_competitions": [
+      "Encourager les élèves de 2AC et 3AC à participer aux Olympiades Nationales et aux Compétitions Nationales de Programmation et Robotique (mai-juin 2027).",
+      "Intégrer les élèves de 3AC dans les ateliers de préparation au Concours de Robotique Pédagogique (Trobotic)."
+    ]
+  }
+}

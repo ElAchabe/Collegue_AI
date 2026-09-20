@@ -1,0 +1,36 @@
+{
+  "sequence_plan_id": "SEQ-1AC_U1_M1-INT",
+  "unit_plan_id": "UP-1AC-U1-2026-2027",
+  "level_code": "1AC",
+  "unit_id": "U1",
+  "sub_module_id": "1AC_U1_M1",
+  "sequence_title": "Système informatique (Concepts de base, matériel, logiciels, connectivité)",
+  "fiche_type": "fiche_integration",
+  "competency_codes": [
+    "C0"
+  ],
+  "duration_hours": 4,
+  "template_structure": [
+    "Situation-problème contextualisée (réelle ou réaliste)",
+    "Consignes opérationnelles de travail",
+    "Ressources internes et externes à mobiliser de manière autonome",
+    "Organisation des groupes/binômes et livrable attendu"
+  ],
+  "status": "draft",
+  "situation_probleme": "",
+  "consignes_operationnelles": [],
+  "ressources_a_mobiliser": [
+    "Distinguer les différents constituants d'un S.I",
+    "Connecter les principaux périphériques externes (clavier, souris...)",
+    "Schématiser un ordinateur"
+  ],
+  "group_organization": "Travail en binômes",
+  "livrable_attendu": "",
+  "methodological_suggestions": [
+    "Étaler la découverte de l'outil informatique sur plusieurs séances.",
+    "Utiliser des schémas illustratifs (constituants d'un ordinateur, touches du clavier).",
+    "Ouvrir au besoin une unité centrale pour l'observation.",
+    "Appuyer le développement des notions par des démonstrations pratiques.",
+    "Éduquer les apprenants à une éthique d'utilisation et à la préservation du matériel."
+  ]
+}

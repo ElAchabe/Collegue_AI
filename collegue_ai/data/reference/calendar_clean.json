@@ -1,0 +1,262 @@
+{
+  "academic_year": "2026-2027",
+  "ministerial_decree": {
+    "decree_number": "047.26",
+    "signature_date": "2026-07-03",
+    "signatory": "Ministre de l'Éducation Nationale, du Préscolaire et des Sports (Mohamed Saad Berrada)",
+    "motto": "من أجل مدرسة ذات جودة للجميع (Pour une école de qualité pour tous)"
+  },
+  "framework_milestones": {
+    "administrative_entry": "2026-09-01",
+    "teacher_entry": "2026-09-02",
+    "student_reception_staggered": {
+      "level_1AC_and_primary_1_2": "2026-09-03",
+      "level_2AC_and_primary_3_4": "2026-09-04",
+      "level_3AC_and_primary_5_6": "2026-09-05"
+    },
+    "mandatory_class_start": "2026-09-07",
+    "classes_end_middle_school": "2027-06-26",
+    "teacher_exit_pv_signing": "2027-07-10",
+    "administrative_exit_pv_signing": "2027-07-31"
+  },
+  "official_holidays": [
+    {
+      "id": 1,
+      "name": "Première période intermédiaire (الفترة البينية الأولى)",
+      "start_date": "2026-10-18",
+      "end_date": "2026-10-25",
+      "duration_days": 8
+    },
+    {
+      "id": 2,
+      "name": "Fête de l'Unité (عيد الوحدة)",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31",
+      "duration_days": 1
+    },
+    {
+      "id": 3,
+      "name": "Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء)",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "duration_days": 1
+    },
+    {
+      "id": 4,
+      "name": "Fête de l'Indépendance (عيد الاستقلال)",
+      "start_date": "2026-11-18",
+      "end_date": "2026-11-18",
+      "duration_days": 1
+    },
+    {
+      "id": 5,
+      "name": "Deuxième période intermédiaire (الفترة البينية الثانية)",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-13",
+      "duration_days": 8
+    },
+    {
+      "id": 6,
+      "name": "Nouvel An Grégorien (فاتح السنة الميلادية)",
+      "start_date": "2027-01-01",
+      "end_date": "2027-01-01",
+      "duration_days": 1
+    },
+    {
+      "id": 7,
+      "name": "Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال)",
+      "start_date": "2027-01-11",
+      "end_date": "2027-01-11",
+      "duration_days": 1
+    },
+    {
+      "id": 8,
+      "name": "Nouvel An Amazigh (فاتح السنة الأمازيغية)",
+      "start_date": "2027-01-14",
+      "end_date": "2027-01-14",
+      "duration_days": 1
+    },
+    {
+      "id": 9,
+      "name": "Vacances de mi-année (عطلة منتصف السنة الدراسية)",
+      "start_date": "2027-01-24",
+      "end_date": "2027-01-31",
+      "duration_days": 8
+    },
+    {
+      "id": 10,
+      "name": "Aïd Al Fitr (عيد الفطر)",
+      "hijri_date": "29 Ramadan 1448 - 02 Chawwal 1448",
+      "start_date": "2027-03-09",
+      "end_date": "2027-03-12",
+      "duration_days": 4,
+      "is_estimated": true
+    },
+    {
+      "id": 11,
+      "name": "Troisième période intermédiaire (الفترة البينية الثالثة)",
+      "start_date": "2027-03-21",
+      "end_date": "2027-03-28",
+      "duration_days": 8
+    },
+    {
+      "id": 12,
+      "name": "Fête du Travail (عيد الشغل)",
+      "start_date": "2027-05-01",
+      "end_date": "2027-05-01",
+      "duration_days": 1
+    },
+    {
+      "id": 13,
+      "name": "Quatrième période intermédiaire (الفترة البينية الرابعة)",
+      "start_date": "2027-05-09",
+      "end_date": "2027-05-16",
+      "duration_days": 8
+    },
+    {
+      "id": 14,
+      "name": "Aïd Al Adha (عيد الأضحى)",
+      "hijri_date": "09 Dhou Al Hijja 1448 - 11 Dhou Al Hijja 1448",
+      "start_date": "2027-05-16",
+      "end_date": "2027-05-18",
+      "duration_days": 3,
+      "is_estimated": true
+    },
+    {
+      "id": 15,
+      "name": "Fatih Moharram (فاتح محرم)",
+      "hijri_date": "01 Moharram 1449",
+      "start_date": "2027-06-06",
+      "end_date": "2027-06-06",
+      "duration_days": 1,
+      "is_estimated": true
+    }
+  ],
+  "assessment_windows": {
+    "diagnostic": {
+      "start": "2026-09-07",
+      "end": "2026-09-19"
+    },
+    "S1_CC": {
+      "start": "2027-01-04",
+      "end": "2027-01-09"
+    },
+    "S2_CC": {
+      "start": "2027-06-14",
+      "end": "2027-06-19"
+    }
+  },
+  "extracurricular_and_competitions": [
+    {
+      "id": "diag_1ac",
+      "name": "Évaluation diagnostique (1AC)",
+      "type": "evaluation",
+      "levels": [
+        "1AC"
+      ],
+      "window": {
+        "start": "2026-09-07",
+        "end": "2026-09-19"
+      },
+      "related_competencies": [],
+      "is_estimated": false
+    },
+    {
+      "id": "local_exam_coordination",
+      "name": "Coordination des examens locaux",
+      "type": "exam_coordination",
+      "levels": [
+        "1AC",
+        "2AC",
+        "3AC"
+      ],
+      "window": {
+        "start": "2027-01-11",
+        "end": "2027-01-16"
+      },
+      "related_competencies": [],
+      "is_estimated": true
+    },
+    {
+      "id": "national_programming_robotics",
+      "name": "Concours national de programmation et robotique",
+      "type": "competition",
+      "levels": [
+        "2AC",
+        "3AC"
+      ],
+      "window": {
+        "start": "2027-05-03",
+        "end": "2027-06-05"
+      },
+      "related_competencies": [
+        "C13",
+        "C31"
+      ],
+      "pedagogical_link": "Activité d'intégration idéale : projet Logo/robotique en binômes.",
+      "is_estimated": true
+    },
+    {
+      "id": "educational_robotics_may",
+      "name": "Robotique éducative (manifestations)",
+      "type": "competition",
+      "levels": [
+        "3AC"
+      ],
+      "window": {
+        "start": "2027-05-03",
+        "end": "2027-05-29"
+      },
+      "related_competencies": [
+        "C13"
+      ],
+      "is_estimated": true
+    },
+    {
+      "id": "regional_exam_prep_3ac",
+      "name": "Préparation à l'examen régional unifié (3AC)",
+      "type": "exam_prep",
+      "levels": [
+        "3AC"
+      ],
+      "window": {
+        "start": "2027-05-31",
+        "end": "2027-06-12"
+      },
+      "related_competencies": [
+        "C0",
+        "C11",
+        "C13",
+        "C23",
+        "C33"
+      ],
+      "is_estimated": true
+    }
+  ],
+  "middle_school_assessment_schedule": {
+    "semester_1": {
+      "last_continuous_assessments": "2027-01-04 to 2027-01-09",
+      "massar_grades_deadline": "2027-01-16",
+      "local_unified_exam_3AC": "2027-01-18 and 2027-01-19",
+      "local_exam_grades_deadline": "2027-01-20",
+      "massar_report_generation": "From 2027-01-21",
+      "class_councils": "2027-01-21 and 2027-01-22",
+      "report_cards_distribution": "2027-01-23"
+    },
+    "semester_2": {
+      "last_continuous_assessments": "2027-06-14 to 2027-06-19",
+      "massar_grades_deadline_cc": "2027-06-22",
+      "collective_prep_regional_exam_3AC": "2027-06-21 and 2027-06-22",
+      "regional_unified_exam_3AC": "2027-06-23 and 2027-06-24",
+      "regional_exam_grades_deadline": "2027-06-30",
+      "massar_final_report_generation": "From 2027-07-01",
+      "class_and_orientation_councils": "2027-07-01 to 2027-07-02",
+      "final_results_distribution": "2027-07-03"
+    }
+  },
+  "pacing_structure_weeks": {
+    "semester_1_weeks": 17,
+    "semester_2_weeks": 17,
+    "total_teaching_and_assessment_weeks": 34
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "unit_plan_id": "UP-1AC-U3-2026-2027",
+  "annual_plan_id": "AP-1AC-2026-2027",
+  "level_code": "1AC",
+  "school_year": "2026-2027",
+  "unit_id": "U3",
+  "unit_title": "Recherches documentaires",
+  "targeted_competencies": [
+    "C21",
+    "C22"
+  ],
+  "competency_details": [
+    {
+      "code": "C21",
+      "domain": "Recherche",
+      "statement": "Rechercher des informations sur un support de stockage"
+    },
+    {
+      "code": "C22",
+      "domain": "Recherche",
+      "statement": "Rechercher des informations à partir d'un support encyclopédique"
+    }
+  ],
+  "total_official_hours": 6,
+  "annual_items": [
+    {
+      "item_id": "AP-1AC-2026-2027-1AC_U3_M1",
+      "unit_id": "U3",
+      "unit_title": "Recherches documentaires",
+      "sub_module_id": "1AC_U3_M1",
+      "topic": "Recherche sur support de stockage et recherche sur encyclopédie numérique",
+      "competency_codes": [
+        "C21",
+        "C22"
+      ],
+      "official_hours": 6,
+      "planned_hours": 6,
+      "semester": 2,
+      "week_start": 25,
+      "week_end": 30,
+      "status": "planned"
+    }
+  ],
+  "proposed_sequences": [
+    {
+      "sub_module_id": "1AC_U3_M1",
+      "sequence_title": "Recherche sur support de stockage et recherche sur encyclopédie numérique",
+      "competency_codes": [
+        "C21",
+        "C22"
+      ],
+      "duration_hours": 6
+    }
+  ],
+  "planning_moments": [
+    {
+      "moment": "1. Apprentissages ponctuels de ressources",
+      "target": "Acquisition ciblée des savoirs, savoir-faire techniques et attitudes (savoir-être)."
+    },
+    {
+      "moment": "2. Activités d'intégration",
+      "target": "Mobilisation coordonnée des acquis face à une situation-problème complexe ou un mini-projet."
+    },
+    {
+      "moment": "3. Activités d'évaluation et régulation",
+      "target": "Diagnostic des représentations, évaluation formative continue et remédiation pédagogique."
+    }
+  ],
+  "pedagogical_suggestions": [
+    "Appuyer les activités sur des besoins réels de recherche d'information.",
+    "Insister sur la méthodologie de recherche d'information.",
+    "Apprendre aux apprenants à critiquer les informations trouvées.",
+    "Relier les recherches aux disciplines scolaires et aux intérêts des apprenants."
+  ],
+  "laboratory_tips": [
+    "Adopter systématiquement le travail en binômes homogènes ou semi-hétérogènes pour encourager l'apprentissage par les pairs.",
+    "Instaurer une rotation stricte du temps machine au clavier/souris (règle des 25 min par élève).",
+    "Organiser l'arborescence locale des postes élèves : créer un répertoire dédié par classe et sous-dossiers par binôme pour éviter l'écrasement involontaire des travaux.",
+    "Rappeler systématiquement les consignes de sécurité électrique, la posture ergonomique et la préservation du matériel informatique."
+  ],
+  "didactic_best_practices": [
+    "Éviter les exposés magistraux purement théoriques : privilégier la méthode démonstrative (Montrer -> Faire faire -> Faire dire) et la découverte guidée.",
+    "Problématiser systématiquement l'introduction d'un nouvel outil (ex. créer le besoin de répéter une instruction avant d'introduire la boucle Logo).",
+    "En traitement de texte (U2 1AC) et tableur (U3 2AC), imposer des textes courts et concrets pour maximiser le temps de manipulation et d'analyse.",
+    "Exiger la tenue d'un cahier de cours contenant une trace écrite synthétique (résumés, schémas, définitions clés) construite avec les élèves."
+  ],
+  "teacher_notes": "",
+  "status": "draft"
+}

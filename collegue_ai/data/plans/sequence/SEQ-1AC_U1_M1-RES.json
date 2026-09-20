@@ -1,0 +1,72 @@
+{
+  "sequence_plan_id": "SEQ-1AC_U1_M1-RES",
+  "unit_plan_id": "UP-1AC-U1-2026-2027",
+  "level_code": "1AC",
+  "unit_id": "U1",
+  "sub_module_id": "1AC_U1_M1",
+  "sequence_title": "Système informatique (Concepts de base, matériel, logiciels, connectivité)",
+  "fiche_type": "fiche_ressources",
+  "competency_codes": [
+    "C0"
+  ],
+  "duration_hours": 4,
+  "template_structure": [
+    "Niveau scolaire et Unité didactique",
+    "Compétence(s) visée(s) et Domaine d'action",
+    "Ressources ciblées (Savoirs, Savoir-faire, Savoir-être)",
+    "Prérequis diagnostiqués",
+    "Matériel et logistique informatique requis",
+    "Déroulement de la séance (Situation déclenchante, Activité pratique, Synthèse institutionnelle/Trace écrite)",
+    "Modalités de différenciation et gestion des binômes"
+  ],
+  "status": "draft",
+  "resources": {
+    "savoir": [
+      "Constituants d'un S.I",
+      "Fonctions de chaque constituant",
+      "Notion de logiciel, de fichier, de dossier",
+      "Configuration monoposte et réseau local",
+      "Typologies réseau (LAN, MAN, WAN)"
+    ],
+    "savoir_faire": [
+      "Distinguer les différents constituants d'un S.I",
+      "Connecter les principaux périphériques externes (clavier, souris...)",
+      "Schématiser un ordinateur"
+    ],
+    "savoir_etre": [
+      "Préserver le matériel",
+      "Respecter les consignes de sécurité",
+      "Convivialité",
+      "Organisation"
+    ]
+  },
+  "prerequisites": [],
+  "material_and_logistics": [
+    "Salle informatique",
+    "Ordinateurs en nombre suffisant (travail en binômes)",
+    "Vidéoprojecteur si disponible",
+    "Cahier de cours pour la trace écrite"
+  ],
+  "deroulement": {
+    "situation_declenchante": "",
+    "activite_pratique": "",
+    "synthese_trace_ecrite": ""
+  },
+  "differentiation": [
+    "Binômes homogènes ou semi-hétérogènes",
+    "Rotation stricte du temps machine (règle des 25 min par élève)"
+  ],
+  "methodological_suggestions": [
+    "Étaler la découverte de l'outil informatique sur plusieurs séances.",
+    "Utiliser des schémas illustratifs (constituants d'un ordinateur, touches du clavier).",
+    "Ouvrir au besoin une unité centrale pour l'observation.",
+    "Appuyer le développement des notions par des démonstrations pratiques.",
+    "Éduquer les apprenants à une éthique d'utilisation et à la préservation du matériel."
+  ],
+  "didactic_best_practices": [
+    "Éviter les exposés magistraux purement théoriques : privilégier la méthode démonstrative (Montrer -> Faire faire -> Faire dire) et la découverte guidée.",
+    "Problématiser systématiquement l'introduction d'un nouvel outil (ex. créer le besoin de répéter une instruction avant d'introduire la boucle Logo).",
+    "En traitement de texte (U2 1AC) et tableur (U3 2AC), imposer des textes courts et concrets pour maximiser le temps de manipulation et d'analyse.",
+    "Exiger la tenue d'un cahier de cours contenant une trace écrite synthétique (résumés, schémas, définitions clés) construite avec les élèves."
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "annual_plan_id": "AP-2AC-2026-2027",
+  "school_year": "2026-2027",
+  "level_code": "2AC",
+  "level_name": "2ème Année du Cycle Secondaire Collégial",
+  "subject": "Informatique",
+  "total_official_hours": 30,
+  "total_planned_hours": 30,
+  "assessment_schedule": {
+    "semester_1": {
+      "last_continuous_assessments": "2027-01-04 to 2027-01-09",
+      "massar_grades_deadline": "2027-01-16",
+      "local_unified_exam_3AC": "2027-01-18 and 2027-01-19",
+      "local_exam_grades_deadline": "2027-01-20",
+      "massar_report_generation": "From 2027-01-21",
+      "class_councils": "2027-01-21 and 2027-01-22",
+      "report_cards_distribution": "2027-01-23"
+    },
+    "semester_2": {
+      "last_continuous_assessments": "2027-06-14 to 2027-06-19",
+      "massar_grades_deadline_cc": "2027-06-22",
+      "collective_prep_regional_exam_3AC": "2027-06-21 and 2027-06-22",
+      "regional_unified_exam_3AC": "2027-06-23 and 2027-06-24",
+      "regional_exam_grades_deadline": "2027-06-30",
+      "massar_final_report_generation": "From 2027-07-01",
+      "class_and_orientation_councils": "2027-07-01 to 2027-07-02",
+      "final_results_distribution": "2027-07-03"
+    }
+  },
+  "status": "draft",
+  "items": [
+    {
+      "item_id": "AP-2AC-2026-2027-2AC_U1_M1",
+      "unit_id": "U1",
+      "unit_title": "Environnement matériel et système d'exploitation réseau",
+      "sub_module_id": "2AC_U1_M1",
+      "topic": "Configuration monoposte et réseau local matériel",
+      "competency_codes": [
+        "C0"
+      ],
+      "official_hours": 4,
+      "planned_hours": 4,
+      "semester": 1,
+      "week_start": 1,
+      "week_end": 4,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-09-07",
+      "week_end_date": "2026-10-04",
+      "holiday_conflicts": []
+    },
+    {
+      "item_id": "AP-2AC-2026-2027-2AC_U1_M2",
+      "unit_id": "U1",
+      "unit_title": "Environnement matériel et système d'exploitation réseau",
+      "sub_module_id": "2AC_U1_M2",
+      "topic": "Système d'exploitation réseau et gestion des utilisateurs",
+      "competency_codes": [
+        "C31"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 5,
+      "week_end": 6,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-05",
+      "week_end_date": "2026-10-18",
+      "holiday_conflicts": [
+        "Première période intermédiaire (الفترة البينية الأولى)"
+      ]
+    },
+    {
+      "item_id": "AP-2AC-2026-2027-2AC_U2_M1",
+      "unit_id": "U2",
+      "unit_title": "Échange d'informations dans un réseau local",
+      "sub_module_id": "2AC_U2_M1",
+      "topic": "Partage des ressources matérielles/logicielles et envoi/réception de messages",
+      "competency_codes": [
+        "C32"
+      ],
+      "official_hours": 2,
+      "planned_hours": 2,
+      "semester": 1,
+      "week_start": 7,
+      "week_end": 8,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-10-19",
+      "week_end_date": "2026-11-01",
+      "holiday_conflicts": [
+        "Première période intermédiaire (الفترة البينية الأولى)",
+        "Fête de l'Unité (عيد الوحدة)"
+      ]
+    },
+    {
+      "item_id": "AP-2AC-2026-2027-2AC_U3_M1",
+      "unit_id": "U3",
+      "unit_title": "Tableurs",
+      "sub_module_id": "2AC_U3_M1",
+      "topic": "Gestion d'un classeur, feuilles, cellules, adresses relatives/absolues, formules, fonctions, graphiques, impression",
+      "competency_codes": [
+        "C12"
+      ],
+      "official_hours": 12,
+      "planned_hours": 12,
+      "semester": 1,
+      "week_start": 9,
+      "week_end": 20,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2026-11-02",
+      "week_end_date": "2027-01-24",
+      "holiday_conflicts": [
+        "Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء)",
+        "Fête de l'Indépendance (عيد الاستقلال)",
+        "Deuxième période intermédiaire (الفترة البينية الثانية)",
+        "Nouvel An Grégorien (فاتح السنة الميلادية)",
+        "Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال)",
+        "Nouvel An Amazigh (فاتح السنة الأمازيغية)",
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)"
+      ]
+    },
+    {
+      "item_id": "AP-2AC-2026-2027-2AC_U4_M1",
+      "unit_id": "U4",
+      "unit_title": "Programmation Logo",
+      "sub_module_id": "2AC_U4_M1",
+      "topic": "Langage Logo, primitives de base, instruction de répétition (POURQUOI/REPETER), écriture et réutilisation de procédures",
+      "competency_codes": [
+        "C13"
+      ],
+      "official_hours": 10,
+      "planned_hours": 10,
+      "semester": 2,
+      "week_start": 21,
+      "week_end": 30,
+      "notes": "",
+      "status": "planned",
+      "week_start_date": "2027-01-25",
+      "week_end_date": "2027-04-04",
+      "holiday_conflicts": [
+        "Vacances de mi-année (عطلة منتصف السنة الدراسية)",
+        "Aïd Al Fitr (عيد الفطر)",
+        "Troisième période intermédiaire (الفترة البينية الثالثة)"
+      ]
+    }
+  ],
+  "warnings": [
+    "2AC_U1_M2: chevauche Première période intermédiaire (الفترة البينية الأولى).",
+    "2AC_U2_M1: chevauche Première période intermédiaire (الفترة البينية الأولى), Fête de l'Unité (عيد الوحدة).",
+    "2AC_U3_M1: chevauche Anniversaire de la Marche Verte (ذكرى المسيرة الخضراء), Fête de l'Indépendance (عيد الاستقلال), Deuxième période intermédiaire (الفترة البينية الثانية), Nouvel An Grégorien (فاتح السنة الميلادية), Manifeste de l'Indépendance (ذكرى تقديم وثيقة الاستقلال), Nouvel An Amazigh (فاتح السنة الأمازيغية), Vacances de mi-année (عطلة منتصف السنة الدراسية).",
+    "2AC_U4_M1: chevauche Vacances de mi-année (عطلة منتصف السنة الدراسية), Aïd Al Fitr (عيد الفطر), Troisième période intermédiaire (الفترة البينية الثالثة)."
+  ]
+}
